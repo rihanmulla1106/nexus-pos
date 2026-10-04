@@ -1,13 +1,18 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { LayoutDashboard, Package, Receipt, LogOut, Users, TrendingDown } from 'lucide-react'
+import { LayoutDashboard, Package, Receipt, LogOut, Users, TrendingDown, Store, Settings, Info, ShieldCheck } from 'lucide-react'
 
 export default function Sidebar({ user, onLogout }) {
   return (
     <aside className="glass-panel" style={{ width: '260px', borderRadius: 0, borderRight: 'var(--glass-border)', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ padding: '24px', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-        <h2 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--primary)' }}>Nexus POS</h2>
-        <p className="text-muted" style={{ fontSize: '0.8rem' }}>Inventory & Billing</p>
+      <div style={{ padding: '24px', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '16px' }}>
+        <div style={{ background: 'linear-gradient(135deg, #6366f1, #a855f7)', padding: '10px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(99, 102, 241, 0.3)' }}>
+          <Store size={24} color="white" />
+        </div>
+        <div>
+          <h2 style={{ fontSize: '1.4rem', fontWeight: '900', margin: 0, background: 'linear-gradient(to right, #fff, #a855f7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '1px' }}>NEXUS</h2>
+          <p className="text-muted" style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', margin: 0 }}>Point of Sale</p>
+        </div>
       </div>
 
       <nav style={{ flex: 1, padding: '24px 16px', display: 'flex', flexDirection: 'column', gap: '8px', overflowY: 'auto' }}>
@@ -81,7 +86,7 @@ export default function Sidebar({ user, onLogout }) {
             background: isActive ? 'rgba(99, 102, 241, 0.15)' : 'transparent',
             fontWeight: isActive ? 600 : 400, transition: 'all 0.2s'
           })}>
-            <LayoutDashboard size={20} /> User Management
+            <ShieldCheck size={20} /> User Management
           </NavLink>
         )}
 
@@ -91,7 +96,7 @@ export default function Sidebar({ user, onLogout }) {
           background: isActive ? 'rgba(99, 102, 241, 0.15)' : 'transparent',
           fontWeight: isActive ? 600 : 400, transition: 'all 0.2s'
         })}>
-          <Package size={20} /> Settings
+          <Settings size={20} /> Settings
         </NavLink>
         
         <NavLink to="/about" style={({ isActive }) => ({
@@ -100,7 +105,7 @@ export default function Sidebar({ user, onLogout }) {
           background: isActive ? 'rgba(99, 102, 241, 0.15)' : 'transparent',
           fontWeight: isActive ? 600 : 400, transition: 'all 0.2s'
         })}>
-          <Package size={20} /> About
+          <Info size={20} /> About
         </NavLink>
       </nav>
       
