@@ -53,10 +53,10 @@ app.whenReady().then(() => {
   ipcMain.on('ping', () => console.log('pong'))
 
   // Setup Database IPC
-  import('./database.js').then(({ setupIpc }) => {
+  import('./controllers/ipcController.js').then(({ setupIpc }) => {
     setupIpc(ipcMain)
   }).catch(err => {
-    console.error('Failed to load database.js', err)
+    console.error('Failed to load ipcController.js', err)
   })
 
   createWindow()

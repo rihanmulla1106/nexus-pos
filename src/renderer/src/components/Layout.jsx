@@ -2,10 +2,10 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Sidebar from './Sidebar'
 
-export default function Layout() {
+export default function Layout({ user, onLogout }) {
   return (
     <div className="app-layout">
-      <Sidebar />
+      <Sidebar user={user} onLogout={onLogout} />
       <main className="main-content">
         <Outlet />
       </main>
