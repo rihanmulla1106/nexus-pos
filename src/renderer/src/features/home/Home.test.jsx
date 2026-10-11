@@ -20,7 +20,7 @@ describe('Home Component', () => {
     expect(greeting).toBeInTheDocument()
   })
 
-  it('renders the quick action cards', () => {
+  it('renders the quick action cards', async () => {
     const mockUser = { username: 'Staff User', role: 'staff' }
     
     render(
@@ -29,8 +29,9 @@ describe('Home Component', () => {
       </BrowserRouter>
     )
 
-    // Check if key cards are rendered
-    expect(screen.getByText('Start Billing')).toBeInTheDocument()
+    // Await for state update to resolve the 'act' warning
+    const billingElement = await screen.findByText('Start Billing')
+    expect(billingElement).toBeInTheDocument()
     expect(screen.getByText('Manage Stock')).toBeInTheDocument()
     expect(screen.getByText('Invoice History')).toBeInTheDocument()
   })

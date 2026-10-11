@@ -2,6 +2,10 @@
 
 A modern, fast, and offline-first desktop application for managing inventory and generating beautiful PDF invoices. Built with **Electron**, **React**, and **SQLite**.
 
+[![Download for Windows](https://img.shields.io/badge/Download-Windows_Installer_(.exe)-blue?style=for-the-badge&logo=windows)](https://github.com/rihanmulla1106/nexus-pos/releases)
+
+> 🚀 **[Click here to Download the latest Windows Installer](https://github.com/rihanmulla1106/nexus-pos/releases)**
+
 ## ✨ Features
 
 - **📊 Interactive Dashboard**: Real-time summaries of total sales, total catalog size, and low-stock alerts.
@@ -28,8 +32,8 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/inventory-billing-system.git
-   cd inventory-billing-system
+   git clone https://github.com/rihanmulla1106/nexus-pos.git
+   cd nexus-pos
    ```
 
 2. Install dependencies:
