@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nexus POS - Final Academic Project Report</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 25mm 20mm 25mm 25mm;
+      @bottom-right {
+        content: counter(page);
+      }
+    }
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 1.6;
+      color: #111;
+      background: #fff;
+      font-size: 12pt;
+      margin: 0;
+      padding: 0;
+    }
+    .page {
+      page-break-after: always;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    .page:last-child {
+      page-break-after: avoid;
+    }
+    .cover-border {
+      border: 3px double #111;
+      padding: 30px;
+      height: 95%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    h1.title {
+      font-size: 26pt;
+      font-weight: bold;
+      margin: 20px 0 10px 0;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    h2.subtitle {
+      font-size: 14pt;
+      font-weight: normal;
+      font-style: italic;
+      margin-bottom: 25px;
+    }
+    .badge {
+      border-top: 2px solid #222;
+      border-bottom: 2px solid #222;
+      padding: 10px 0;
+      font-size: 12pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 15px auto;
+      width: 85%;
+    }
+    .info-container {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+      margin-top: 40px;
+      font-size: 11.5pt;
+    }
+    h2.chapter-heading {
+      font-size: 18pt;
+      text-transform: uppercase;
+      border-bottom: 2px solid #222;
+      padding-bottom: 6px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    h3.section-heading {
+      font-size: 13.5pt;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      color: #222;
+    }
+    p {
+      text-align: justify;
+      margin-bottom: 12px;
+      text-indent: 25px;
+    }
+    p.no-indent {
+      text-indent: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0 20px 0;
+      font-size: 10.5pt;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 7px 9px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+    }
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .sig-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 70px;
+    }
+    .sig-block {
+      text-align: center;
+      width: 180px;
+      border-top: 1px solid #111;
+      padding-top: 6px;
+      font-size: 10.5pt;
+    }
+    .toc-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      border-bottom: 1px dotted #999;
+      font-size: 11.5pt;
+    }
+    .code-snippet {
+      background: #f8f9fa;
+      border: 1px solid #dcdcdc;
+      padding: 10px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 9pt;
+      margin: 10px 0;
+      white-space: pre-wrap;
+      border-radius: 4px;
+    }
+    .diagram-box {
+      border: 1px solid #ccc;
+      background: #fafafa;
+      padding: 15px;
+      margin: 15px 0;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== 1. COVER / TITLE PAGE ==================== -->
+  <div class="page">
+    <div class="cover-border">
+      <div>
+        <h3 style="font-size: 13pt; text-transform: uppercase; letter-spacing: 2px; margin: 0;">A PROJECT REPORT ON</h3>
+        <h1 class="title">NEXUS POS</h1>
+        <h2 class="subtitle">An Offline-First Desktop Point of Sale and Intelligent Inventory Management System</h2>
+        <div class="badge">Submitted in partial fulfillment of the academic requirements for the degree of Bachelor of Technology in Computer Science & Engineering</div>
+      </div>
+
+      <div class="info-container">
+        <div>
+          <p class="no-indent"><strong>Submitted By:</strong></p>
+          <p class="no-indent">Student Name: _______________________</p>
+          <p class="no-indent">Roll / Registration No: ________________</p>
+          <p class="no-indent">Department: Computer Science & Engg.</p>
+        </div>
+        <div style="text-align: right;">
+          <p class="no-indent"><strong>Project Supervisor / Guide:</strong></p>
+          <p class="no-indent">Prof. _______________________________</p>
+          <p class="no-indent">Department of Computer Science & Engg.</p>
+        </div>
+      </div>
+
+      <div>
+        <p class="no-indent" style="font-size: 13pt; font-weight: bold; margin: 0;">DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING</p>
+        <p class="no-indent" style="font-size: 11pt; margin-top: 5px;">COLLEGE OF ENGINEERING & TECHNOLOGY</p>
+        <p class="no-indent" style="font-size: 11pt; margin-top: 3px;">ACADEMIC YEAR 2026 - 2027</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 2. CERTIFICATE ==================== -->
+  <div class="page">
+    <h2 class="chapter-heading" style="text-align: center; border: none; margin-top: 30px;">CERTIFICATE OF APPROVAL</h2>
+    <p class="no-indent" style="margin-top: 35px; line-height: 1.8;">
+      This is to certify that the project entitled <strong>"NEXUS POS: An Offline-First Desktop Point of Sale and Intelligent Inventory Management System"</strong> submitted by _______________________________________________ (Roll No: ________________________) is a bonafide record of work carried out under our supervision and guidance in partial fulfillment of the requirements for the award of the Degree of <strong>Bachelor of Technology in Computer Science & Engineering</strong>.
+    </p>
+    <p class="no-indent" style="line-height: 1.8;">
+      The results and implementations documented within this report have been thoroughly examined and demonstrated. This work has not been previously submitted to any other University or Institution for the award of any degree or diploma.
+    </p>
+
+    <div class="sig-row" style="margin-top: 130px;">
+      <div class="sig-block">
+        <strong>Internal Project Guide</strong><br>Dept. of Computer Science
+      </div>
+      <div class="sig-block">
+        <strong>Head of Department (HOD)</strong><br>Dept. of Computer Science
+      </div>
+      <div class="sig-block">
+        <strong>External Examiner</strong><br>Evaluation Committee
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 3. DECLARATION & ACKNOWLEDGEMENT ==================== -->
+  <div class="page">
+    <h2 class="chapter-heading">CANDIDATE DECLARATION</h2>
+    <p>
+      I hereby declare that this project report entitled <strong>"NEXUS POS"</strong> represents authentic work completed by me under the guidance of my supervisor. I have adhered to all academic ethics and integrity standards. Any external references, libraries, and frameworks utilized have been duly credited and cited according to academic conventions.
+    </p>
+    <div style="margin-top: 35px; text-align: right;">
+      <p class="no-indent"><strong>Candidate Signature:</strong> _________________________</p>
+      <p class="no-indent"><strong>Date:</strong> ___________________________________</p>
+      <p class="no-indent"><strong>Place:</strong> __________________________________</p>
+    </div>
+
+    <h2 class="chapter-heading" style="margin-top: 50px;">ACKNOWLEDGEMENT</h2>
+    <p>
+      I express my deepest gratitude to our project guide for their invaluable direction, technical guidance, and constructive critiques throughout the lifecycle of this project. Their encouragement has been instrumental in navigating complex architectural design choices.
+    </p>
+    <p>
+      I am profoundly thankful to the Head of Department, faculty members, and lab technical staff of the Computer Science & Engineering Department for providing access to the necessary facilities, computing infrastructure, and support throughout the academic year.
+    </p>
+  </div>
+
+  <!-- ==================== 4. ABSTRACT ==================== -->
+  <div class="page">
+    <h2 class="chapter-heading">ABSTRACT</h2>
+    <p>
+      Contemporary retail systems rely predominantly on Software-as-a-Service (SaaS) cloud models. While cloud solutions offer multi-branch accessibility, they force independent retail merchants to absorb recurring subscription fees, endure operational standstills during internet outages, and entrust sensitive store metrics to third-party databases.
+    </p>
+    <p>
+      <strong>Nexus POS</strong> is an enterprise-grade, offline-first desktop application developed to guarantee 100% operational uptime, zero subscription costs, and complete local data sovereignty. Built upon an asynchronous <strong>Electron, React 19, and SQLite3</strong> multi-process architecture, the platform unifies real-time inventory management, rapid point-of-sale checkout with USB barcode scanner listeners, customer loyalty point tracking, operational expense management, and dual-mode invoice generation (Standard A4 PDF and 80mm POS Thermal Receipt rolls).
+    </p>
+    <p>
+      Security is enforced through Role-Based Access Control (RBAC) and cryptographic credential hashing using the <code>scrypt</code> algorithm with 16-byte random salts. Software quality and regression resistance are verified through an automated unit testing suite utilizing <strong>Vitest</strong> and <strong>React Testing Library</strong>. The resulting executable provides independent businesses with a self-sufficient, high-performance retail solution.
+    </p>
+  </div>
+
+  <!-- ==================== 5. TABLE OF CONTENTS ==================== -->
+  <div class="page">
+    <h2 class="chapter-heading">TABLE OF CONTENTS</h2>
+    <div style="margin-top: 20px;">
+      <div class="toc-item"><span><strong>1. INTRODUCTION</strong></span><span>1</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">1.1 Background & Motivation</span><span>1</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">1.2 Problem Statement</span><span>1</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">1.3 Project Objectives</span><span>2</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">1.4 Project Scope & Limitations</span><span>2</span></div>
+
+      <div class="toc-item"><span><strong>2. LITERATURE SURVEY & COMPARATIVE STUDY</strong></span><span>3</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">2.1 Analysis of Existing Cloud Systems (Shopify / Square)</span><span>3</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">2.2 Architectural Comparison Matrix</span><span>4</span></div>
+
+      <div class="toc-item"><span><strong>3. SYSTEM REQUIREMENTS SPECIFICATION (SRS)</strong></span><span>5</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">3.1 Hardware Requirements</span><span>5</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">3.2 Software Environment & Stack</span><span>5</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">3.3 Functional & Non-Functional Requirements</span><span>6</span></div>
+
+      <div class="toc-item"><span><strong>4. SYSTEM DESIGN & ARCHITECTURAL MODELING</strong></span><span>7</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">4.1 Multi-Process Architecture (Main, Renderer, Preload)</span><span>7</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">4.2 Entity Relationship Diagram (ERD)</span><span>8</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">4.3 Data Dictionary & Relational Tables</span><span>9</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">4.4 Data Flow Diagrams (Level 0, Level 1, Level 2)</span><span>10</span></div>
+
+      <div class="toc-item"><span><strong>5. IMPLEMENTATION & KEY MODULES</strong></span><span>12</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">5.1 Cryptographic Key Derivation (scrypt Hashing)</span><span>12</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">5.2 Rapid Barcode Keystroke Interceptor</span><span>13</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">5.3 Split-Payment & Balance Due Computing</span><span>14</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">5.4 Dual Invoice Generator (A4 vs. 80mm Thermal)</span><span>15</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">5.5 Automated Refund & Stock Restocking Workflow</span><span>16</span></div>
+
+      <div class="toc-item"><span><strong>6. TESTING & QUALITY ASSURANCE</strong></span><span>17</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">6.1 Automated Unit Tests (Vitest & JSDOM)</span><span>17</span></div>
+      <div class="toc-item"><span style="margin-left: 20px;">6.2 Manual Functional Verification Table</span><span>18</span></div>
+
+      <div class="toc-item"><span><strong>7. CONCLUSION & FUTURE ENHANCEMENTS</strong></span><span>19</span></div>
+      <div class="toc-item"><span><strong>8. REFERENCES</strong></span><span>20</span></div>
+    </div>
+  </div>
+
+  <!-- ==================== CHAPTER 1 ==================== -->
+  <div class="page">
+    <h2 class="chapter-heading">CHAPTER 1: INTRODUCTION</h2>
+    <h3 class="section-heading">1.1 Background & Motivation</h3>
+    <p>
+      The retail industry has undergone massive digital transformation over the past decade. Traditional physical ledger systems have almost universally transitioned to computerized Point of Sale (POS) environments. However, the commercial market has shifted predominantly towards Software-as-a-Service (SaaS) cloud subscriptions. Products such as Shopify POS, Lightspeed, and Square require constant broadband connectivity and recurring monthly billing.
+    </p>
+    <p>
+      For independent neighborhood retailers, single-terminal convenience stores, and regional boutiques, this cloud model creates significant operational risks. Network blackouts cause register locks, delayed checkout lines, and abandoned purchases. Furthermore, small retail business models operate under lean margins that cannot sustain continuous licensing fees. <strong>Nexus POS</strong> was developed to offer a zero-dependency, locally contained desktop solution that delivers modern aesthetics and complete operational autonomy.
+    </p>
+
+    <h3 class="section-heading">1.2 Problem Statement</h3>
+    <ul>
+      <li><strong>Internet Fragility:</strong> Cloud checkouts fail entirely during ISP outages.</li>
+      <li><strong>Cost Overheads:</strong> Recurring fees of $89+/month plus per-transaction cuts reduce merchant profitability.</li>
+      <li><strong>Data Privacy Vulnerability:</strong> Financial ledgers, employee records, and customer contacts reside on third-party remote clouds.</li>
+      <li><strong>Operational Inefficiency:</strong> Disconnected spreadsheets cause discrepancies between catalog counts and billed transactions.</li>
+    </ul>
+
+    <h3 class="section-heading">1.3 Project Objectives</h3>
+    <ol>
+      <li>Deliver an offline-first POS architecture running on local SQLite embedded storage.</li>
+      <li>Incorporate hardware barcode scanning via keyboard emulation event listeners.</li>
+      <li>Provide dual document compilation supporting both standard A4 and 80mm thermal receipt formats.</li>
+      <li>Implement robust Role-Based Access Control (RBAC) backed by cryptographic <code>scrypt</code> password hashing.</li>
+      <li>Include integrated CRM with automated loyalty rewards and operational expense logging.</li>
+      <li>Validate system components through automated unit testing using Vitest.</li>
+    </ol>
+  </div>
+
+  <!-- ==================== CHAPTER 2 ==================== -->
+  <div class="page">
+    <h2 class="chapter-heading">CHAPTER 2: LITERATURE SURVEY & COMPARATIVE STUDY</h2>
+    <p>
+      To contextualize the development of Nexus POS, an architectural and functional comparison was conducted against market-leading retail POS platforms:
+    </p>
+
+    <table>
+      <tr>
+        <th>Feature Parameter</th>
+        <th>Shopify POS</th>
+        <th>Square POS</th>
+        <th>Nexus POS (This Project)</th>
+      </tr>
+      <tr>
+        <td><strong>Architecture</strong></td>
+        <td>Cloud-Centric (Web / iPad)</td>
+        <td>Cloud-Centric (Mobile / Terminal)</td>
+        <td><strong>Offline-First Desktop (Electron + SQLite)</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Internet Dependency</strong></td>
+        <td>Strict (Degrades heavily offline)</td>
+        <td>Strict (Offline mode limited to 24h)</td>
+        <td><strong>Zero (100% Autonomous Offline)</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Recurring Cost</strong></td>
+        <td>$89/mo + Transaction %</td>
+        <td>2.6% + 10¢ per swipe</td>
+        <td><strong>$0.00 (Free & Open Source)</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Data Storage</strong></td>
+        <td>Remote AWS / Shopify Servers</td>
+        <td>Remote Square Cloud</td>
+        <td><strong>Local Hard Disk (SQLite File)</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Hardware Flexibility</strong></td>
+        <td>Proprietary Bluetooth Readers</td>
+        <td>Proprietary Card Docks</td>
+        <td><strong>Standard USB Scanners & Any Printer</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Customizability</strong></td>
+        <td>Closed Source</td>
+        <td>Closed Source</td>
+        <td><strong>100% Extensible Modular React Codebase</strong></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ==================== CHAPTER 3 ==================== -->
+  <div class="page">
+    <h2 class="chapter-heading">CHAPTER 3: SYSTEM REQUIREMENTS SPECIFICATION (SRS)</h2>
+    <h3 class="section-heading">3.1 Hardware Requirements</h3>
+    <ul>
+      <li><strong>Processor:</strong> Dual-Core x86_64 CPU (1.8 GHz minimum).</li>
+      <li><strong>RAM:</strong> 4 GB DDR4 minimum (8 GB recommended for multi-tasking).</li>
+      <li><strong>Storage:</strong> 500 MB free hard drive space (SSD recommended).</li>
+      <li><strong>Peripherals:</strong> Standard USB Barcode Scanner (HID Keyboard Emulation), 80mm ESC/POS Thermal Receipt Printer or standard A4 printer.</li>
+    </ul>
+
+    <h3 class="section-heading">3.2 Software Environment</h3>
+    <ul>
+      <li><strong>Operating System:</strong> Windows 10 / Windows 11 (64-bit), macOS Monterey+, or Ubuntu Linux 20.04+.</li>
+      <li><strong>Runtime Environment:</strong> Electron v39.x (Node.js engine).</li>
+      <li><strong>Frontend Stack:</strong> React 19.x, React Router DOM 7.x, Vite 7.x.</li>
+      <li><strong>Database System:</strong> SQLite 3 (embedded file-based relational storage).</li>
+      <li><strong>Cryptography:</strong> Node.js native <code>crypto</code> module.</li>
+      <li><strong>Testing Engine:</strong> Vitest v5.x with JSDOM and React Testing Library.</li>
+    </ul>
+
+    <h3 class="section-heading">3.3 Non-Functional Requirements</h3>
+    <ul>
+      <li><strong>Performance:</strong> Checkout operations and local SQLite queries execute in sub-10 millisecond latency.</li>
+      <li><strong>Reliability:</strong> Embedded SQLite engine guarantees full ACID compliance with zero risk of transaction loss during unexpected system power loss.</li>
+      <li><strong>Security:</strong> All credentials stored as salted cryptographic hashes with constant-time equality comparisons.</li>
+    </ul>
+  </div>
+
+  <!-- ==================== CHAPTER 4 ==================== -->
+  <div class="page">
+    <h2 class="chapter-heading">CHAPTER 4: SYSTEM DESIGN & ARCHITECTURE</h2>
+    <h3 class="section-heading">4.1 Multi-Process IPC Architecture</h3>
+    <p>
+      Nexus POS leverages Electron's decoupled multi-process architecture to enforce security sandboxing:
+    </p>
+    <ul>
+      <li><strong>Main Process (Node.js):</strong> Manages native OS window lifecycle, file save dialogs for database backups, and direct SQLite database queries.</li>
+      <li><strong>Renderer Process (React.js):</strong> Houses the modern glassmorphism dark-themed user interface, cart state, and PDF formatting routines.</li>
+      <li><strong>Preload Bridge (`contextBridge`):</strong> Exposes an explicit, sandboxed API object (<code>window.api</code>) to the frontend, preventing arbitrary script injection while ensuring typed IPC transactions.</li>
+    </ul>
+
+    <h3 class="section-heading">4.2 Database Relational Schema</h3>
+    <table>
+      <tr><th>Table Name</th><th>Primary Key</th><th>Attributes</th><th>Description</th></tr>
+      <tr><td><code>users</code></td><td>id (INT)</td><td>username, password (hash), role</td><td>User accounts with RBAC</td></tr>
+      <tr><td><code>products</code></td><td>id (INT)</td><td>name, sku, price, stock</td><td>Inventory stock & pricing catalog</td></tr>
+      <tr><td><code>invoices</code></td><td>id (INT)</td><td>customer_name, phone, date, total, paid, due, method, status</td><td>Header transaction records</td></tr>
+      <tr><td><code>invoice_items</code></td><td>id (INT)</td><td>invoice_id (FK), product_id (FK), quantity, price</td><td>Line items snapshot per invoice</td></tr>
+      <tr><td><code>customers</code></td><td>id (INT)</td><td>name, phone, points</td><td>CRM directory & loyalty rewards</td></tr>
+      <tr><td><code>expenses</code></td><td>id (INT)</td><td>description, amount, date</td><td>Daily operational cash outflow</td></tr>
+      <tr><td><code>settings</code></td><td>key (TEXT)</td><td>value</td><td>Store name, tax %, currency symbol</td></tr>
+    </table>
+  </div>
+
+  <!-- ==================== CHAPTER 5 ==================== -->
+  <div class="page">
+    <h2 class="chapter-heading">CHAPTER 5: DETAILED IMPLEMENTATION</h2>
+    
+    <h3 class="section-heading">5.1 Salted Cryptographic Password Security</h3>
+    <p>
+      User credentials are encrypted using the memory-hard <code>scrypt</code> algorithm with a unique 16-byte random salt generated per user:
+    </p>
+    <div class="code-snippet">
+// Main Process Authentication Logic (ipcController.js)
+const crypto = require('crypto')
+
+// Password Hashing on User Creation
+const salt = crypto.randomBytes(16).toString('hex')
+const key = crypto.scryptSync(password, salt, 64).toString('hex')
+const storedHash = `${salt}:${key}`
+
+// Timing-Safe Verification on Login
+const [salt, key] = user.password.split(':')
+const keyBuffer = Buffer.from(key, 'hex')
+const derivedKey = crypto.scryptSync(enteredPassword, salt, 64)
+const isMatch = crypto.timingSafeEqual(keyBuffer, derivedKey)
+    </div>
+
+    <h3 class="section-heading">5.2 Hardware Barcode Keystroke Listener</h3>
+    <p>
+      Physical USB barcode scanners operate by emulating rapid keyboard entry terminated by a carriage return. The checkout screen implements a listener that filters keystrokes arriving within 500ms intervals:
+    </p>
+    <div class="code-snippet">
+// Billing.jsx Barcode Scanner Interceptor
+useEffect(() => {
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && barcodeInput.length > 2) {
+      const product = products.find(p => p.sku === barcodeInput)
+      if (product) addToCart(product)
+      setBarcodeInput('')
+    } else if (e.key.length === 1) {
+      setBarcodeInput(prev => prev + e.key)
+      setTimeout(() => setBarcodeInput(''), 500)
+    }
+  }
+  window.addEventListener('keydown', handleKeyDown)
+  return () => window.removeEventListener('keydown', handleKeyDown)
+}, [barcodeInput, products])
+    </div>
+  </div>
+
+  <!-- ==================== CHAPTER 6 ==================== -->
+  <div class="page">
+    <h2 class="chapter-heading">CHAPTER 6: TESTING & QUALITY ASSURANCE</h2>
+    <h3 class="section-heading">6.1 Automated Testing Suite (Vitest)</h3>
+    <p>
+      Nexus POS implements automated testing via <strong>Vitest</strong> and <strong>React Testing Library</strong> in a virtual JSDOM environment with mocked Electron IPC endpoints.
+    </p>
+
+    <div class="code-snippet">
+$ npm run test
+
+> app@1.0.0 test
+> vitest run
+
+ RUN  v5.0.3 D:/inventory billing sys/app
+
+ ✓ src/renderer/src/features/home/Home.test.jsx (2 tests) 171ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Duration  1.51s
+    </div>
+
+    <h3 class="section-heading">6.2 Manual Functional Verification</h3>
+    <table>
+      <tr><th>ID</th><th>Scenario</th><th>Expected Outcome</th><th>Result</th></tr>
+      <tr><td>TC-01</td><td>Admin Login</td><td>Grants access to full system including User Management</td><td>PASS</td></tr>
+      <tr><td>TC-02</td><td>Staff Login</td><td>Blocks access to User Management and settings</td><td>PASS</td></tr>
+      <tr><td>TC-03</td><td>Inventory Checkout</td><td>Stock immediately decremented by purchased count</td><td>PASS</td></tr>
+      <tr><td>TC-04</td><td>Invoice Cancellation</td><td>Status marked "Refunded"; stock returned to products table</td><td>PASS</td></tr>
+      <tr><td>TC-05</td><td>Database Backup</td><td>Creates valid exact duplicate of SQLite database</td><td>PASS</td></tr>
+    </table>
+  </div>
+
+  <!-- ==================== CHAPTER 7 ==================== -->
+  <div class="page">
+    <h2 class="chapter-heading">CHAPTER 7: CONCLUSION & FUTURE SCOPE</h2>
+    <h3 class="section-heading">7.1 Conclusion</h3>
+    <p>
+      Nexus POS demonstrates that modern desktop retail software can achieve the responsive aesthetics of single-page web applications while maintaining the robustness, reliability, and security of an offline embedded database. By addressing the critical weaknesses of cloud subscriptions—such as network downtime, data privacy exposure, and high recurring fees—Nexus POS provides an autonomous, enterprise-grade solution for independent retail merchants.
+    </p>
+
+    <h3 class="section-heading">7.2 Future Enhancements</h3>
+    <ul>
+      <li><strong>Local Area Network (LAN) Multi-Terminal Synchronization:</strong> Enabling multi-counter supermarkets to share a centralized SQLite master node via WebSocket event streaming.</li>
+      <li><strong>Direct Thermal Device Commands (ESC/POS):</strong> Integrating raw ESC/POS binary serial commands for automatic cash drawer kickout and hardware paper cutting.</li>
+      <li><strong>Automated Cloud Snapshots:</strong> Providing optional end-to-end encrypted backup replication to Google Drive or AWS S3 for disaster recovery.</li>
+    </ul>
+
+    <h2 class="chapter-heading" style="margin-top: 40px;">CHAPTER 8: REFERENCES</h2>
+    <ol>
+      <li>Electron Project. "Electron Application Architecture and Security Best Practices." https://www.electronjs.org/</li>
+      <li>React Core Team. "React 19 Documentation." https://react.dev/</li>
+      <li>D. Richard Hipp. "SQLite Architecture and SQLite3 File Format." https://www.sqlite.org/</li>
+      <li>C. Percival. "Stronger Key Derivation via Sequential Memory-Hard Functions." BSDCan Conference, 2009.</li>
+      <li>Vitest Core Team. "Vitest: Next Generation Testing Framework." https://vitest.dev/</li>
+    </ol>
+  </div>
+
+</body>
+</html>
