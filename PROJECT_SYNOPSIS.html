@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nexus POS - Project Synopsis</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 1.5;
+      color: #111;
+      background: #fff;
+      font-size: 11pt;
+      margin: 0;
+      padding: 0;
+    }
+    .header-box {
+      border: 2px solid #222;
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 20px;
+      background-color: #fbfbfb;
+    }
+    h1 {
+      font-size: 20pt;
+      margin: 0 0 6px 0;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #0b192c;
+    }
+    h2.project-title {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #1e3e62;
+      margin: 6px 0 0 0;
+      text-transform: uppercase;
+    }
+    .meta-table {
+      width: 100%;
+      margin: 12px 0;
+      border: none;
+    }
+    .meta-table td {
+      border: none;
+      padding: 3px 0;
+      font-size: 10.5pt;
+    }
+    h2.section-title {
+      font-size: 12.5pt;
+      text-transform: uppercase;
+      border-bottom: 1.5px solid #222;
+      padding-bottom: 3px;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      color: #000;
+    }
+    p {
+      text-align: justify;
+      margin-bottom: 10px;
+      text-indent: 20px;
+    }
+    p.no-indent {
+      text-indent: 0;
+    }
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 10pt;
+    }
+    table.data-table th, table.data-table td {
+      border: 1px solid #444;
+      padding: 6px 8px;
+      text-align: left;
+    }
+    table.data-table th {
+      background-color: #f0f4f8;
+      font-weight: bold;
+      color: #111;
+    }
+    ul, ol {
+      margin-top: 4px;
+      margin-bottom: 10px;
+      padding-left: 22px;
+    }
+    li {
+      margin-bottom: 4px;
+      text-align: justify;
+    }
+    .module-card {
+      margin-bottom: 10px;
+    }
+    .module-title {
+      font-weight: bold;
+      color: #0b192c;
+    }
+    .footer-signatures {
+      margin-top: 35px;
+      display: flex;
+      justify-content: space-between;
+      page-break-inside: avoid;
+    }
+    .sig-box {
+      width: 180px;
+      text-align: center;
+      border-top: 1px solid #222;
+      padding-top: 5px;
+      font-size: 10pt;
+      font-weight: bold;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header-box">
+    <h1>PROJECT SYNOPSIS</h1>
+    <h2 class="project-title">NEXUS POS: An Offline-First Desktop Point of Sale & Intelligent Inventory Management System</h2>
+  </div>
+
+  <table class="meta-table">
+    <tr>
+      <td style="width: 50%;"><strong>Degree / Branch:</strong> B.Tech in Computer Science & Engineering</td>
+      <td style="width: 50%; text-align: right;"><strong>Academic Year:</strong> 2026 - 2027</td>
+    </tr>
+    <tr>
+      <td><strong>Candidate Name:</strong> _____________________________</td>
+      <td style="text-align: right;"><strong>Project Guide:</strong> Prof. ________________________</td>
+    </tr>
+  </table>
+
+  <!-- 1. ABSTRACT -->
+  <h2 class="section-title">1. Abstract / Introduction</h2>
+  <p>
+    Modern retail environments rely heavily on Software-as-a-Service (SaaS) cloud Point of Sale (POS) tools that enforce recurring subscription fees, continuous broadband internet connectivity, and external data storage. For independent retail merchants and local businesses, internet outages halt transaction queues, resulting in financial loss and dissatisfied shoppers. 
+  </p>
+  <p>
+    <strong>Nexus POS</strong> is an offline-first desktop Point of Sale and inventory control system engineered to guarantee 100% operational uptime, zero subscription costs, and total data sovereignty. Developed using an <strong>Electron, React 19, and SQLite3</strong> architecture, the application delivers sub-10ms transactional processing, real-time stock deduction, cryptographic credential authentication, customer loyalty rewards, split-payment tracking, operational expense management, and dual-mode receipt generation (standard A4 and 80mm thermal receipt formats).
+  </p>
+
+  <!-- 2. PROBLEM STATEMENT -->
+  <h2 class="section-title">2. Problem Statement</h2>
+  <p class="no-indent">Contemporary small-to-medium retail operations face critical barriers with traditional and cloud POS platforms:</p>
+  <ul>
+    <li><strong>Cloud Downtime Vulnerability:</strong> Network interruptions disable register operations, causing lost sales and extended customer checkout wait times.</li>
+    <li><strong>High Recurring Overhead:</strong> Subscription-based models (Shopify POS, Square) demand continuous monthly platform and per-transaction fees.</li>
+    <li><strong>Data Privacy & Security Risks:</strong> Sensitive business revenue numbers, customer contact details, and product catalogs are stored on third-party remote servers.</li>
+    <li><strong>Inventory Disconnection:</strong> Manual stock spreadsheets create discrepancies between actual shelf counts and billed receipts.</li>
+  </ul>
+
+  <!-- 3. OBJECTIVES -->
+  <h2 class="section-title">3. Objectives</h2>
+  <ul>
+    <li>Deliver an autonomous, zero-downtime offline transaction terminal utilizing an embedded SQLite database.</li>
+    <li>Enforce Role-Based Access Control (RBAC) separating administrative controls from staff checkout terminals.</li>
+    <li>Protect sensitive user credentials using memory-hard, salt-based cryptographic key derivation (<code>scrypt</code>).</li>
+    <li>Support hardware barcode scanners through automated high-speed keystroke interception listeners.</li>
+    <li>Provide client-side compilation of dual-format printable receipts (Formal A4 PDF and 80mm POS thermal rolls).</li>
+    <li>Implement automated unit testing via Vitest and React Testing Library to guarantee stability.</li>
+  </ul>
+
+  <!-- 4. SYSTEM ARCHITECTURE & TECH STACK -->
+  <h2 class="section-title">4. System Architecture & Technical Stack</h2>
+  <p>
+    The system follows Electron's multi-process security architecture. The <strong>Main Process (Node.js)</strong> handles low-level file I/O, database transactions, and cryptographic routines. The <strong>Renderer Process (React.js)</strong> manages user interactions and visual presentation. Sandboxed communication is governed by an explicit <strong>Inter-Process Communication (IPC)</strong> bridge via <code>contextBridge</code>.
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 25%;">Layer</th>
+        <th style="width: 35%;">Technology</th>
+        <th style="width: 40%;">Role in System</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Runtime Environment</strong></td>
+        <td>Electron (v39.x / Node.js)</td>
+        <td>Cross-platform desktop container with native OS access</td>
+      </tr>
+      <tr>
+        <td><strong>Frontend Framework</strong></td>
+        <td>React 19 & Vite 7</td>
+        <td>Component-based reactive UI with rapid hot-module reload</td>
+      </tr>
+      <tr>
+        <td><strong>Client Routing</strong></td>
+        <td>React Router DOM (v7)</td>
+        <td>Single Page Application (SPA) client navigation</td>
+      </tr>
+      <tr>
+        <td><strong>Embedded Database</strong></td>
+        <td>SQLite3</td>
+        <td>ACID-compliant, zero-latency local persistent storage</td>
+      </tr>
+      <tr>
+        <td><strong>Document Engine</strong></td>
+        <td>jsPDF & jsPDF-AutoTable</td>
+        <td>Client-side dynamic compilation of A4 & Thermal bills</td>
+      </tr>
+      <tr>
+        <td><strong>Cryptography</strong></td>
+        <td>Node.js <code>crypto</code> (scrypt)</td>
+        <td>Salted password hashing with timing-safe validation</td>
+      </tr>
+      <tr>
+        <td><strong>Automated QA</strong></td>
+        <td>Vitest + RTL + JSDOM</td>
+        <td>Automated unit testing with mocked IPC bridges</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <!-- 5. FUNCTIONAL MODULES -->
+  <h2 class="section-title">5. Key Functional Modules</h2>
+  
+  <div class="module-card">
+    <span class="module-title">1. Authentication & Role-Based Access Control (RBAC):</span>
+    Multi-tier account system (Admin vs. Staff). Passwords are cryptographically salted and hashed using <code>scrypt</code> (stored format: <code>&lt;salt&gt;:&lt;derivedKey&gt;</code>). Staff members are restricted strictly to checkout screens.
+  </div>
+
+  <div class="module-card">
+    <span class="module-title">2. POS Terminal & Hardware Barcode Integration:</span>
+    Split-screen catalog and active cart view. Implements rapid keystroke event listeners supporting standard USB barcode scanners with automatic submit on carriage return, split/partial payments (Cash/Card/UPI), and automatic change computation.
+  </div>
+
+  <div class="module-card">
+    <span class="module-title">3. Inventory & Catalog Control:</span>
+    Comprehensive CRUD operations with SKU tracking. Automatically deducts stock upon bill completion and restores stock during invoice refunds with visual safety threshold alerts (Stock &le; 5).
+  </div>
+
+  <div class="module-card">
+    <span class="module-title">4. CRM & Customer Loyalty System:</span>
+    Customer directory searchable by phone number. Calculates and awards loyalty points (+1 point per currency unit spent) on every completed invoice.
+  </div>
+
+  <div class="module-card">
+    <span class="module-title">5. Financial & Expense Tracking:</span>
+    Daily store expenditure ledger (rent, electricity, supplier payments) combined with gross revenues to compute accurate net operational performance.
+  </div>
+
+  <div class="module-card">
+    <span class="module-title">6. Disaster Recovery & Local Backup:</span>
+    One-click local database backup creating clean filesystem-level duplicates of the SQLite database.
+  </div>
+
+  <!-- 6. DATABASE SCHEMA -->
+  <h2 class="section-title">6. Database Schema (SQLite)</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 20%;">Table</th>
+        <th style="width: 25%;">Primary Key</th>
+        <th style="width: 55%;">Key Attributes & Descriptions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>users</strong></td>
+        <td><code>id</code> (INTEGER)</td>
+        <td><code>username</code> (UNIQUE), <code>password</code> (scrypt hash), <code>role</code> (Admin/Staff)</td>
+      </tr>
+      <tr>
+        <td><strong>products</strong></td>
+        <td><code>id</code> (INTEGER)</td>
+        <td><code>name</code>, <code>sku</code> (UNIQUE), <code>price</code>, <code>stock</code></td>
+      </tr>
+      <tr>
+        <td><strong>invoices</strong></td>
+        <td><code>id</code> (INTEGER)</td>
+        <td><code>customer_name</code>, <code>customer_phone</code>, <code>date</code>, <code>total</code>, <code>amount_paid</code>, <code>balance_due</code>, <code>payment_method</code>, <code>status</code></td>
+      </tr>
+      <tr>
+        <td><strong>invoice_items</strong></td>
+        <td><code>id</code> (INTEGER)</td>
+        <td><code>invoice_id</code> (FK), <code>product_id</code> (FK), <code>quantity</code>, <code>price</code></td>
+      </tr>
+      <tr>
+        <td><strong>customers</strong></td>
+        <td><code>id</code> (INTEGER)</td>
+        <td><code>name</code>, <code>phone</code> (UNIQUE), <code>points</code> (Loyalty rewards)</td>
+      </tr>
+      <tr>
+        <td><strong>expenses</strong></td>
+        <td><code>id</code> (INTEGER)</td>
+        <td><code>description</code>, <code>amount</code>, <code>date</code></td>
+      </tr>
+      <tr>
+        <td><strong>settings</strong></td>
+        <td><code>key</code> (TEXT)</td>
+        <td><code>value</code> (Store name, currency symbol, tax percentage)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 7. TESTING -->
+  <h2 class="section-title">7. Testing & Quality Assurance</h2>
+  <p>
+    The application incorporates an automated testing pipeline configured with <strong>Vitest</strong> and <strong>React Testing Library</strong> running against an emulated JSDOM environment. Global mocks simulate Electron IPC endpoints, validating component lifecycles, user greetings, cart renders, and routing protections. All test suites pass with 100% success.
+  </p>
+
+  <!-- 8. CONCLUSION -->
+  <h2 class="section-title">8. Conclusion & Future Scope</h2>
+  <p>
+    Nexus POS demonstrates that modern desktop retail software can achieve the visual polish and ease-of-use of web apps while retaining the independence, zero-latency, and reliability of embedded local storage. Future enhancements include multi-terminal LAN synchronization over local WebSockets, raw ESC/POS thermal command generation for automated cash drawer triggers, and optional encrypted cloud backup mirrors.
+  </p>
+
+  <!-- SIGNATURES -->
+  <div class="footer-signatures">
+    <div class="sig-box">Candidate Signature</div>
+    <div class="sig-box">Project Guide</div>
+    <div class="sig-box">Head of Department</div>
+  </div>
+
+</body>
+</html>
