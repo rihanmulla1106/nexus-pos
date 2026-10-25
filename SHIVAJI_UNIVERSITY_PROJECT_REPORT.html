@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nexus POS - Shivaji University Project Report</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm 20mm 20mm 25mm;
+    }
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 1.6;
+      color: #111;
+      background: #fff;
+      font-size: 12pt;
+      margin: 0;
+      padding: 0;
+    }
+    .page {
+      page-break-after: always;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    .page:last-child {
+      page-break-after: avoid;
+    }
+    .cover-border {
+      border: 3px double #111;
+      padding: 24px;
+      height: 96%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    h1.project-title {
+      font-size: 22pt;
+      font-weight: bold;
+      margin: 12px 0 6px 0;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #0b192c;
+    }
+    h2.project-sub {
+      font-size: 13pt;
+      font-weight: normal;
+      font-style: italic;
+      margin: 0 0 16px 0;
+      color: #333;
+    }
+    .logo-emblem {
+      margin: 10px auto;
+      text-align: center;
+    }
+    .emblem-circle {
+      width: 110px;
+      height: 110px;
+      border: 2px solid #003366;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 9pt;
+      font-weight: bold;
+      color: #003366;
+      background: #f4f8fb;
+      text-transform: uppercase;
+      padding: 4px;
+      box-sizing: border-box;
+    }
+    .emblem-sanstha {
+      width: 100px;
+      height: 100px;
+      border: 2px solid #8B0000;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 8.5pt;
+      font-weight: bold;
+      color: #8B0000;
+      background: #fffaf0;
+      text-transform: uppercase;
+      padding: 4px;
+      box-sizing: border-box;
+    }
+    .cert-heading {
+      text-align: center;
+      font-size: 14pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+      color: #003366;
+    }
+    .cert-subheading {
+      text-align: center;
+      font-size: 12pt;
+      font-weight: bold;
+      margin: 2px 0;
+    }
+    h2.chapter-title {
+      font-size: 16pt;
+      text-transform: uppercase;
+      border-bottom: 2px solid #222;
+      padding-bottom: 5px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      color: #0b192c;
+    }
+    h3.section-title {
+      font-size: 13pt;
+      margin-top: 16px;
+      margin-bottom: 8px;
+      color: #111;
+      font-weight: bold;
+    }
+    p {
+      text-align: justify;
+      margin-bottom: 12px;
+      text-indent: 25px;
+    }
+    p.no-indent {
+      text-indent: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 18px 0;
+      font-size: 11pt;
+    }
+    table, th, td {
+      border: 1px solid #333;
+    }
+    th, td {
+      padding: 6px 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f5f9;
+      font-weight: bold;
+    }
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 12px;
+    }
+    li {
+      margin-bottom: 4px;
+      text-align: justify;
+    }
+    .sig-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    .sig-table td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: center;
+    }
+    .code-box {
+      background: #f8f9fa;
+      border: 1px solid #ccc;
+      padding: 10px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 9.5pt;
+      margin: 10px 0;
+      white-space: pre-wrap;
+      border-radius: 3px;
+    }
+    .screen-card {
+      border: 1px solid #888;
+      background: #fafafa;
+      padding: 12px;
+      margin: 12px 0;
+      border-radius: 4px;
+    }
+    .screen-card h4 {
+      margin: 0 0 6px 0;
+      color: #0b192c;
+      font-size: 11.5pt;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== COVER PAGE ==================== -->
+  <div class="page">
+    <div class="cover-border">
+      <div>
+        <p class="no-indent" style="font-size: 14pt; margin: 0; font-weight: bold; text-transform: uppercase;">
+          A Project Report On
+        </p>
+        <h1 class="project-title">NEXUS POS</h1>
+        <h2 class="project-sub">An Offline-First Desktop Point of Sale and Intelligent Inventory Management System</h2>
+        
+        <p class="no-indent" style="font-size: 12pt; margin: 4px 0;"><strong>For</strong></p>
+        <p class="no-indent" style="font-size: 14pt; font-weight: bold; text-transform: uppercase; color: #8B0000; margin: 0;">
+          Raje Ramrao Mahavidyalaya, Jath
+        </p>
+      </div>
+
+      <!-- UNIVERSITY LOGO SECTION -->
+      <div class="logo-emblem">
+        <div class="emblem-circle">
+          <span>★ SHIVAJI ★<br>UNIVERSITY<br>KOLHAPUR<br>ज्ञानमेवामृतम्</span>
+        </div>
+        <p class="no-indent" style="font-size: 11pt; font-weight: bold; margin-top: 6px;">Submitted to</p>
+        <p class="no-indent" style="font-size: 14pt; font-weight: bold; text-transform: uppercase; margin: 0;">
+          Shivaji University, Kolhapur
+        </p>
+        <p class="no-indent" style="font-size: 11pt; font-style: italic; margin-top: 2px;">
+          In Partial fulfillment for the Degree of
+        </p>
+        <p class="no-indent" style="font-size: 13pt; font-weight: bold; text-transform: uppercase; color: #003366; margin: 2px 0;">
+          Bachelor of Computer Application (Sem-VI)
+        </p>
+      </div>
+
+      <!-- STUDENT & GUIDE SECTION -->
+      <div style="display: flex; justify-content: space-between; text-align: left; margin: 10px 15px; font-size: 11pt;">
+        <div>
+          <p class="no-indent"><strong>By:</strong></p>
+          <p class="no-indent" style="font-size: 12pt; font-weight: bold;">Mr. Rihan Mulla</p>
+          <p class="no-indent">Exam Seat No: _________________</p>
+        </div>
+        <div style="text-align: right;">
+          <p class="no-indent"><strong>Under the guidance of:</strong></p>
+          <p class="no-indent" style="font-size: 12pt; font-weight: bold;">Prof. [Guide Name]</p>
+          <p class="no-indent">(M.C.A)</p>
+        </div>
+      </div>
+
+      <!-- SANSTHA & PRINCIPAL FOOTER -->
+      <div>
+        <div class="emblem-sanstha" style="width: 80px; height: 80px; font-size: 7.5pt; margin-bottom: 6px;">
+          <span>SWAMI<br>VIVEKANAND<br>SANSTHA</span>
+        </div>
+        <p class="no-indent" style="font-size: 11pt; font-weight: bold; margin: 0;">Through,</p>
+        <p class="no-indent" style="font-size: 12pt; font-weight: bold; margin: 2px 0;">The Principal,</p>
+        <p class="no-indent" style="font-size: 13pt; font-weight: bold; text-transform: uppercase; margin: 0;">
+          Raje Ramrao Mahavidyalaya, Jath
+        </p>
+        <p class="no-indent" style="font-size: 11pt; margin-top: 4px;"><strong>In the Academic Year: 2026 - 2027</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CERTIFICATE ==================== -->
+  <div class="page">
+    <div style="text-align: center; margin-bottom: 25px;">
+      <div class="emblem-sanstha" style="width: 85px; height: 85px; font-size: 8pt; margin-bottom: 8px;">
+        <span>SWAMI<br>VIVEKANAND<br>SANSTHA</span>
+      </div>
+      <p class="cert-heading">Shri Swami Vivekanand Shikshan Sanstha, Kolhapur’s</p>
+      <p class="cert-subheading" style="font-size: 15pt; color: #8B0000; text-transform: uppercase;">
+        Raje Ramrao Mahavidyalaya, Jath
+      </p>
+      <p class="cert-subheading" style="color: #003366;">DEPARTMENT OF B.C.A.</p>
+    </div>
+
+    <h2 style="text-align: center; font-size: 18pt; text-decoration: underline; margin: 15px 0 25px 0;">CERTIFICATE</h2>
+
+    <p style="line-height: 1.8; font-size: 12pt;">
+      This is to certify that the project report entitled <strong>“NEXUS POS: An Offline-First Desktop Point of Sale and Intelligent Inventory Management System”</strong> is a bonafide record of project work, carried out in this college by <strong>Mr. Rihan Mulla</strong> in partial fulfillment of the award of <strong>Bachelor of Computer Application-III (Sem–VI)</strong> as laid down by <strong>Shivaji University, Kolhapur</strong>.
+    </p>
+
+    <p style="line-height: 1.8; font-size: 12pt;">
+      This report presents their sincere work carried out under my guidance and supervision during the academic year 2026 - 2027.
+    </p>
+
+    <div style="margin-top: 40px; font-size: 11.5pt;">
+      <p class="no-indent"><strong>Place:</strong> Jath</p>
+      <p class="no-indent"><strong>Date:</strong> _____ / _____ / 2026</p>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; margin-top: 80px; text-align: center;">
+      <div style="width: 200px;">
+        <div style="border-top: 1px solid #111; padding-top: 5px;">
+          <strong>Prof. [Guide Name]</strong><br>
+          (M.C.A)<br>
+          Project Guide
+        </div>
+      </div>
+      <div style="width: 200px;">
+        <div style="border-top: 1px solid #111; padding-top: 5px;">
+          <strong>Mr. Mali P.D</strong><br>
+          HOD<br>
+          Dept. of B.C.A.
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 60px; font-size: 11pt;">
+      <p class="no-indent"><strong>Examiners:</strong></p>
+      <p class="no-indent" style="margin-top: 8px;">1) Internal Examiner: ____________________________________</p>
+      <p class="no-indent" style="margin-top: 8px;">2) External Examiner: ____________________________________</p>
+    </div>
+  </div>
+
+  <!-- ==================== DECLARATION ==================== -->
+  <div class="page">
+    <h2 style="text-align: center; font-size: 16pt; text-decoration: underline; margin-bottom: 25px;">DECLARATION</h2>
+
+    <p class="no-indent"><strong>To,</strong><br>
+      The Registrar,<br>
+      Shivaji University,<br>
+      Kolhapur.
+    </p>
+
+    <p class="no-indent" style="margin-top: 15px;"><strong>Respected Sir,</strong></p>
+
+    <p style="line-height: 1.8;">
+      We the undersigned, <strong>Mr. Rihan Mulla</strong>, hereby declare that the project report entitled <strong>“NEXUS POS: An Offline-First Desktop Point of Sale and Intelligent Inventory Management System”</strong> submitted by us under the guidance of <strong>Prof. [Guide Name] (M.C.A)</strong> is our original work.
+    </p>
+
+    <p style="line-height: 1.8;">
+      We have not reproduced any information from any report submitted to Shivaji University, Kolhapur this year or in any of the previous academic years. We understand that any such copying is liable to punishment in a way that University Authorities deem fit.
+    </p>
+
+    <div style="margin-top: 30px; font-size: 11pt;">
+      <p class="no-indent"><strong>Place:</strong> Jath</p>
+      <p class="no-indent"><strong>Date:</strong> _____ / _____ / 2026</p>
+    </div>
+
+    <table class="sig-table">
+      <thead>
+        <tr>
+          <th style="width: 25%; text-align: center;">Exam Seat No.</th>
+          <th style="width: 50%; text-align: center;">Name of Member</th>
+          <th style="width: 25%; text-align: center;">Signature</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="height: 45px; text-align: center;">_________________</td>
+          <td>Mr. Rihan Mulla</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ==================== ACKNOWLEDGEMENT ==================== -->
+  <div class="page">
+    <h2 style="text-align: center; font-size: 16pt; text-decoration: underline; margin-bottom: 25px;">ACKNOWLEDGEMENT</h2>
+
+    <p style="line-height: 1.8;">
+      We express a very proud and greatest moment of our lives in putting forward this project entitled <strong>“NEXUS POS”</strong>. With the submission of this project, we would like to express our heartfelt gratitude to the individuals who have provided their valuable time, technical insights, and inspiration to accomplish this work.
+    </p>
+
+    <p style="line-height: 1.8;">
+      At the outset, we are glad to bow with profound gratitude before our project guide <strong>Prof. [Guide Name] (M.C.A)</strong> for his inspiring guidance, constant encouragement, and technical directions throughout the development lifecycle of this project.
+    </p>
+
+    <p style="line-height: 1.8;">
+      We convey our sincere thanks to <strong>Mr. Mali P.D (Head of Department of B.C.A.)</strong> and all respected faculty members and lab staff of Raje Ramrao Mahavidyalaya, Jath, for their continuous support and for providing computing infrastructure.
+    </p>
+
+    <p style="line-height: 1.8;">
+      We also express our sincere respect to the Principal, <strong>Raje Ramrao Mahavidyalaya, Jath</strong>, for granting permission and facilities. Lastly, we thank our parents, friends, and well-wishers who stood by us and supported the progress of this project.
+    </p>
+
+    <div style="margin-top: 30px; font-size: 11pt;">
+      <p class="no-indent"><strong>Place:</strong> Jath</p>
+      <p class="no-indent"><strong>Date:</strong> _____ / _____ / 2026</p>
+    </div>
+
+    <table class="sig-table">
+      <thead>
+        <tr>
+          <th style="width: 25%; text-align: center;">Exam Seat No.</th>
+          <th style="width: 50%; text-align: center;">Name of Member</th>
+          <th style="width: 25%; text-align: center;">Signature</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="height: 45px; text-align: center;">_________________</td>
+          <td>Mr. Rihan Mulla</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ==================== TABLE OF CONTENTS / INDEX ==================== -->
+  <div class="page">
+    <h2 style="text-align: center; font-size: 16pt; text-decoration: underline; margin-bottom: 20px;">INDEX / TABLE OF CONTENTS</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 10%; text-align: center;">Sr. No.</th>
+          <th style="width: 75%;">Chapter Name & Sub-Topics</th>
+          <th style="width: 15%; text-align: center;">Page No.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center; font-weight: bold;">1</td>
+          <td>
+            <strong>System Analysis</strong><br>
+            &bull; 1.1 Background of the Problem<br>
+            &bull; 1.2 Existing System and its Limitations<br>
+            &bull; 1.3 Objective of the Project<br>
+            &bull; 1.4 Scope of the Project
+          </td>
+          <td style="text-align: center;">1</td>
+        </tr>
+        <tr>
+          <td style="text-align: center; font-weight: bold;">2</td>
+          <td>
+            <strong>System Study / Proposed System</strong><br>
+            &bull; 2.1 Software Development Model (Agile Prototyping Model)<br>
+            &bull; 2.2 Feasibility Study (Technical, Operational, Economic)
+          </td>
+          <td style="text-align: center;">3</td>
+        </tr>
+        <tr>
+          <td style="text-align: center; font-weight: bold;">3</td>
+          <td>
+            <strong>Requirement Analysis</strong><br>
+            &bull; 3.1 Functional Requirements<br>
+            &bull; 3.2 Non-Functional Requirements<br>
+            &bull; 3.3 Hardware & Software Requirements
+          </td>
+          <td style="text-align: center;">5</td>
+        </tr>
+        <tr>
+          <td style="text-align: center; font-weight: bold;">4</td>
+          <td>
+            <strong>System Design</strong><br>
+            &bull; 4.1 System Architecture Diagram / DFD (Level 0, Level 1, Level 2)<br>
+            &bull; 4.2 Database Design (ER Diagram & Data Dictionary)
+          </td>
+          <td style="text-align: center;">7</td>
+        </tr>
+        <tr>
+          <td style="text-align: center; font-weight: bold;">5</td>
+          <td>
+            <strong>Implementation</strong><br>
+            &bull; 5.1 Module-wise Screenshots of Input & Output Design<br>
+            &bull; 5.2 Reports (Standard A4 & 80mm Thermal Receipt Generation)<br>
+            &bull; 5.3 Code Snippets (scrypt Security, Barcode Scanner, SQLite Transactions)
+          </td>
+          <td style="text-align: center;">11</td>
+        </tr>
+        <tr>
+          <td style="text-align: center; font-weight: bold;">6</td>
+          <td>
+            <strong>Testing</strong><br>
+            &bull; 6.1 Testing Methodology (Automated Vitest & Manual Test Cases)
+          </td>
+          <td style="text-align: center;">16</td>
+        </tr>
+        <tr>
+          <td style="text-align: center; font-weight: bold;">7</td>
+          <td>
+            <strong>Conclusion & Future Scope</strong><br>
+            &bull; 7.1 Summary of Work<br>
+            &bull; 7.2 Limitations<br>
+            &bull; 7.3 Learning Outcomes<br>
+            &bull; 7.4 Possible Enhancements
+          </td>
+          <td style="text-align: center;">18</td>
+        </tr>
+        <tr>
+          <td style="text-align: center; font-weight: bold;">8</td>
+          <td><strong>Bibliography & References</strong></td>
+          <td style="text-align: center;">20</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ==================== CHAPTER 1 ==================== -->
+  <div class="page">
+    <h2 class="chapter-title">CHAPTER 1: SYSTEM ANALYSIS</h2>
+    
+    <h3 class="section-title">1.1 Background of the Problem</h3>
+    <p>
+      In physical retail stores (such as grocery supermarkets, electrical shops, clothing boutiques, and independent retail outlets in regional towns like Jath and across Maharashtra), billing and inventory tracking form the core daily operations. Historically, storekeepers relied on handwritten ledger books or basic disconnected desktop spreadsheets. 
+    </p>
+    <p>
+      While modern cloud-based Software-as-a-Service (SaaS) POS platforms have emerged, they require uninterrupted high-speed internet connections and recurring monthly subscriptions. In semi-urban and rural retail hubs, internet connectivity frequently fluctuates or drops. When a cloud POS disconnects, the cashier cannot scan barcodes, generate bills, or calculate balances, leading to long customer queues, transaction abandonment, and severe financial losses.
+    </p>
+
+    <h3 class="section-title">1.2 Existing System and Its Limitations</h3>
+    <p>The existing systems used by small merchants fall into two categories:</p>
+    <ol>
+      <li>
+        <strong>Manual Paper Ledgers / Excel Sheets:</strong>
+        <ul>
+          <li>Prone to manual mathematical errors in tax, discount, and change calculations.</li>
+          <li>No automated stock decrement upon billing; inventory counts require time-consuming manual audits.</li>
+          <li>Zero customer history tracking or loyalty rewards.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Cloud-Based POS Systems (e.g., Shopify POS, Square):</strong>
+        <ul>
+          <li><strong>Internet Vulnerability:</strong> Complete halt of retail operations during network downtime.</li>
+          <li><strong>Prohibitive Recurring Costs:</strong> Recurring monthly charges ($89+/month) plus transaction percentage fees.</li>
+          <li><strong>Data Privacy Risks:</strong> Store financial records and customer phone numbers are hosted on remote third-party cloud servers.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3 class="section-title">1.3 Objective of the Project</h3>
+    <ul>
+      <li>To build a 100% offline-first desktop application with zero internet reliance.</li>
+      <li>To provide sub-10 millisecond billing response times using local SQLite embedded storage.</li>
+      <li>To enforce Role-Based Access Control (RBAC) separating Admin settings from Staff checkout actions.</li>
+      <li>To protect user credentials using memory-hard cryptographic password hashing (<code>scrypt</code>).</li>
+      <li>To integrate hardware USB barcode scanners via keyboard emulation event listeners.</li>
+      <li>To support dual-format invoice compilation: standard A4 documents and 80mm POS thermal receipt rolls.</li>
+      <li>To automate inventory decrement on checkout and restock restoration on refund.</li>
+    </ul>
+
+    <h3 class="section-title">1.4 Scope of the Project</h3>
+    <p>
+      The scope of <strong>Nexus POS</strong> covers single-terminal physical retail establishments, including department stores, pharmacies, hardware outlets, and apparel shops. It encompasses product catalog management, barcode-driven billing, customer CRM with loyalty points, daily expense auditing, graphical revenue reporting, and local database disaster backup.
+    </p>
+  </div>
+
+  <!-- ==================== CHAPTER 2 ==================== -->
+  <div class="page">
+    <h2 class="chapter-title">CHAPTER 2: SYSTEM STUDY / PROPOSED SYSTEM</h2>
+    
+    <h3 class="section-title">2.1 Software Development Model</h3>
+    <p>
+      The project was developed using the <strong>Agile Iterative Prototyping Model</strong>. This software engineering methodology allowed rapid phase-by-phase development, continuous refinement, and rigorous verification:
+    </p>
+    <ul>
+      <li><strong>Phase 1 (Requirements & Architecture):</strong> Decoupled Electron multi-process design and schema creation.</li>
+      <li><strong>Phase 2 (Core Inventory & POS Terminal):</strong> Rapid UI wireframing with React and Vite.</li>
+      <li><strong>Phase 3 (Billing & Dual PDF Engine):</strong> Integrated `jsPDF` for A4 invoices and 80mm thermal rolls.</li>
+      <li><strong>Phase 4 (Enterprise Security & CRM):</strong> Implemented `scrypt` cryptographic hashing and customer loyalty points.</li>
+      <li><strong>Phase 5 (Financial Auditing & Expenses):</strong> Built daily expense tracking and net profit math.</li>
+      <li><strong>Phase 6 (Automated QA & Packaging):</strong> Wrote automated Vitest unit test suites and built Windows `.exe` installers.</li>
+    </ul>
+
+    <h3 class="section-title">2.2 Feasibility Study</h3>
+    <p>A three-dimensional feasibility analysis was conducted:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 25%;">Feasibility Dimension</th>
+          <th style="width: 75%;">Evaluation & Findings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Technical Feasibility</strong></td>
+          <td>
+            Built on Electron v39.x, React 19, and SQLite3. These technologies run natively on standard commodity PC hardware without needing expensive server configurations or high-end graphics processing units.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Operational Feasibility</strong></td>
+          <td>
+            The UI is built with high-contrast, modern glassmorphism dark aesthetics and intuitive ergonomics. Cashiers with basic computer literacy can scan barcodes and issue receipts with zero training.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Economic Feasibility</strong></td>
+          <td>
+            The software uses 100% open-source libraries and embedded SQLite. It imposes ₹0 recurring monthly server costs, zero cloud subscription fees, and eliminates recurring licensing charges.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ==================== CHAPTER 3 ==================== -->
+  <div class="page">
+    <h2 class="chapter-title">CHAPTER 3: REQUIREMENT ANALYSIS</h2>
+    
+    <h3 class="section-title">3.1 Functional Requirements</h3>
+    <ul>
+      <li><strong>FR-1 (Authentication):</strong> Login screen with RBAC distinguishing Admin and Staff privileges.</li>
+      <li><strong>FR-2 (Product Catalog):</strong> Full CRUD capabilities for products (SKU, Name, Price, Stock).</li>
+      <li><strong>FR-3 (POS Checkout):</strong> Fast cart additions, item count toggles, and barcode scan interception.</li>
+      <li><strong>FR-4 (Split-Payment & Dues):</strong> Support Cash, Card, UPI, and partial payment balance calculation.</li>
+      <li><strong>FR-5 (Invoicing Engine):</strong> Client-side dynamic PDF compilation in A4 and 80mm thermal roll formats.</li>
+      <li><strong>FR-6 (Refund & Restock):</strong> Cancellation workflow restoring sold quantities back to inventory stock.</li>
+      <li><strong>FR-7 (CRM & Loyalty):</strong> Customer telephone lookup with automated +1 point per unit spent.</li>
+      <li><strong>FR-8 (Expense Ledger):</strong> Recording daily operational expenses (rent, electricity, tea, supplies).</li>
+      <li><strong>FR-9 (Disaster Recovery):</strong> Single-click local backup of the raw SQLite `.db` file.</li>
+    </ul>
+
+    <h3 class="section-title">3.2 Non-Functional Requirements</h3>
+    <ul>
+      <li><strong>Performance:</strong> Sub-10 millisecond database response times for instantaneous barcode lookups.</li>
+      <li><strong>Availability:</strong> 100% uptime with zero internet dependency.</li>
+      <li><strong>Security:</strong> Credential protection via salted <code>scrypt</code> hashes with timing-safe validation.</li>
+      <li><strong>Data Integrity:</strong> Full ACID compliance guaranteed by SQLite transactions.</li>
+    </ul>
+
+    <h3 class="section-title">3.3 Hardware & Software Requirements</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Development Environment</th>
+          <th>Client / Deployment Environment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Operating System</strong></td>
+          <td>Windows 11 (64-bit)</td>
+          <td>Windows 10 / 11, macOS, or Linux</td>
+        </tr>
+        <tr>
+          <td><strong>Processor</strong></td>
+          <td>Intel Core i5 (11th Gen)</td>
+          <td>Dual Core x86_64 CPU (1.8 GHz+)</td>
+        </tr>
+        <tr>
+          <td><strong>RAM</strong></td>
+          <td>8 GB / 16 GB DDR4</td>
+          <td>4 GB DDR4 Minimum</td>
+        </tr>
+        <tr>
+          <td><strong>Hard Disk</strong></td>
+          <td>512 GB SSD</td>
+          <td>500 MB Free Disk Space</td>
+        </tr>
+        <tr>
+          <td><strong>Runtime / Engine</strong></td>
+          <td>Node.js v22.x, Electron v39.x</td>
+          <td>Bundled Standalone Electron Executable</td>
+        </tr>
+        <tr>
+          <td><strong>Database</strong></td>
+          <td>SQLite3 embedded</td>
+          <td>Embedded local `inventory_billing.db`</td>
+        </tr>
+        <tr>
+          <td><strong>Peripherals</strong></td>
+          <td>Keyboard, Mouse</td>
+          <td>USB Barcode Scanner & 80mm Thermal Printer</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ==================== CHAPTER 4 ==================== -->
+  <div class="page">
+    <h2 class="chapter-title">CHAPTER 4: SYSTEM DESIGN</h2>
+    
+    <h3 class="section-title">4.1 System Architecture & Data Flow Diagrams</h3>
+    <p>
+      Nexus POS implements Electron's multi-process architecture. The <strong>Main Process</strong> runs in Node.js and executes privileged disk I/O and SQLite operations. The <strong>Renderer Process</strong> renders the React 19 UI inside a secure Chromium sandbox. Communication is strictly routed through an asynchronous <strong>IPC (Inter-Process Communication)</strong> bridge.
+    </p>
+
+    <div class="screen-card">
+      <h4>DFD Level 0: Context Diagram</h4>
+      <p class="no-indent">
+        <strong>External Entities:</strong> Administrator, Cashier/Staff, Customer.<br>
+        <strong>Inputs to System:</strong> Credentials, Barcode scans, Cart items, Tendered payments, Expense records, Settings.<br>
+        <strong>Outputs from System:</strong> Printed A4 / Thermal bills, Change due, Stock availability alerts, Visual revenue reports, SQLite backup file.
+      </p>
+    </div>
+
+    <div class="screen-card">
+      <h4>DFD Level 1: Process Decomposition</h4>
+      <p class="no-indent">
+        &bull; <strong>Process 1.0 (Auth & RBAC):</strong> Queries Data Store D1 (<code>users</code>) via scrypt hash comparison.<br>
+        &bull; <strong>Process 2.0 (Inventory Control):</strong> Reads/Writes Data Store D2 (<code>products</code>).<br>
+        &bull; <strong>Process 3.0 (POS & Billing):</strong> Queries D2, writes transaction records to D3 (<code>invoices</code> & <code>invoice_items</code>), and fetches tax settings from D6.<br>
+        &bull; <strong>Process 4.0 (CRM & Loyalty):</strong> Writes accrued points to Data Store D4 (<code>customers</code>).<br>
+        &bull; <strong>Process 5.0 (Expense Logging):</strong> Writes daily cash outflows to Data Store D5 (<code>expenses</code>).<br>
+        &bull; <strong>Process 6.0 (Executive Analytics):</strong> Aggregates D2, D3, and D5 to compute net business performance.
+      </p>
+    </div>
+
+    <h3 class="section-title">4.2 Database Design (ER Diagram & Data Dictionary)</h3>
+    <p>The database schema is fully normalized into seven relational tables in SQLite:</p>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Table Name</th>
+          <th>Primary Key</th>
+          <th>Foreign Key(s)</th>
+          <th>Attributes & Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>`users`</strong></td>
+          <td><code>id</code></td>
+          <td>None</td>
+          <td><code>username</code> (UNIQUE), <code>password</code> (scrypt hash), <code>role</code> (Admin/Staff)</td>
+        </tr>
+        <tr>
+          <td><strong>`products`</strong></td>
+          <td><code>id</code></td>
+          <td>None</td>
+          <td><code>name</code>, <code>sku</code> (UNIQUE), <code>price</code>, <code>stock</code></td>
+        </tr>
+        <tr>
+          <td><strong>`invoices`</strong></td>
+          <td><code>id</code></td>
+          <td>None</td>
+          <td><code>customer_name</code>, <code>customer_phone</code>, <code>date</code>, <code>total</code>, <code>amount_paid</code>, <code>balance_due</code>, <code>payment_method</code>, <code>status</code></td>
+        </tr>
+        <tr>
+          <td><strong>`invoice_items`</strong></td>
+          <td><code>id</code></td>
+          <td><code>invoice_id</code>, <code>product_id</code></td>
+          <td><code>quantity</code>, <code>price</code> (Snapshot at time of sale)</td>
+        </tr>
+        <tr>
+          <td><strong>`customers`</strong></td>
+          <td><code>id</code></td>
+          <td>None</td>
+          <td><code>name</code>, <code>phone</code> (UNIQUE), <code>points</code></td>
+        </tr>
+        <tr>
+          <td><strong>`expenses`</strong></td>
+          <td><code>id</code></td>
+          <td>None</td>
+          <td><code>description</code>, <code>amount</code>, <code>date</code></td>
+        </tr>
+        <tr>
+          <td><strong>`settings`</strong></td>
+          <td><code>key</code></td>
+          <td>None</td>
+          <td><code>value</code> (Store name, currency symbol, tax percentage)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ==================== CHAPTER 5 ==================== -->
+  <div class="page">
+    <h2 class="chapter-title">CHAPTER 5: IMPLEMENTATION</h2>
+    
+    <h3 class="section-title">5.1 Module-wise Design Overview</h3>
+    <div class="screen-card">
+      <h4>1. Authentication & Login Screen</h4>
+      <p class="no-indent">Provides a secure dark-mode portal. Authenticates users using cryptographic hash comparisons. Restricts administrative navigation links if the user role is 'Staff'.</p>
+    </div>
+    <div class="screen-card">
+      <h4>2. POS Terminal & Split-Screen Checkout</h4>
+      <p class="no-indent">Features dual panels: the left catalog displays product cards with live stock counts, and the right panel displays the real-time calculated cart, tax calculations, payment mode buttons, and print options.</p>
+    </div>
+    <div class="screen-card">
+      <h4>3. Inventory Management Screen</h4>
+      <p class="no-indent">Enables adding, updating, searching, and deleting catalog items. Visual red badges alert managers to items whose stock has reached &le; 5 units.</p>
+    </div>
+    <div class="screen-card">
+      <h4>4. Analytics & Executive Dashboard</h4>
+      <p class="no-indent">Displays high-level KPI cards (Total Sales, Total Products, Low Stock Count, Today's Profit) and a clean weekly revenue performance graph.</p>
+    </div>
+
+    <h3 class="section-title">5.2 Document & Report Generation</h3>
+    <p>
+      Nexus POS dynamically compiles invoices on the client using <code>jsPDF</code> and <code>jsPDF-AutoTable</code>. Two layout formats are available:
+    </p>
+    <ol>
+      <li><strong>Standard A4 Tax Invoice:</strong> Clean full-page document including store metadata, invoice numbers, customer phone numbers, itemized tables, subtotal, tax breakdown, and signature blocks.</li>
+      <li><strong>80mm Thermal Receipt:</strong> Formatted specifically for POS thermal rolls with condensed typography, dashed dividers, and receipt footers.</li>
+    </ol>
+
+    <h3 class="section-title">5.3 Important Code Snippets</h3>
+    <p class="no-indent"><strong>1. Salted Cryptographic Key Derivation (`scrypt` in Node.js):</strong></p>
+    <div class="code-box">
+const crypto = require('crypto')
+
+// Secure User Registration
+const salt = crypto.randomBytes(16).toString('hex')
+const key = crypto.scryptSync(password, salt, 64).toString('hex')
+const passwordHash = `${salt}:${key}`
+
+// Timing-Safe Authentication
+const [salt, key] = user.password.split(':')
+const keyBuffer = Buffer.from(key, 'hex')
+const derivedKey = crypto.scryptSync(enteredPassword, salt, 64)
+const isValid = crypto.timingSafeEqual(keyBuffer, derivedKey)
+    </div>
+
+    <p class="no-indent"><strong>2. Barcode Keystroke Listener in React (`Billing.jsx`):</strong></p>
+    <div class="code-box">
+useEffect(() => {
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && barcodeInput.length > 2) {
+      const product = products.find(p => p.sku === barcodeInput)
+      if (product) addToCart(product)
+      setBarcodeInput('')
+    } else if (e.key.length === 1) {
+      setBarcodeInput(prev => prev + e.key)
+      setTimeout(() => setBarcodeInput(''), 500)
+    }
+  }
+  window.addEventListener('keydown', handleKeyDown)
+  return () => window.removeEventListener('keydown', handleKeyDown)
+}, [barcodeInput, products])
+    </div>
+  </div>
+
+  <!-- ==================== CHAPTER 6 ==================== -->
+  <div class="page">
+    <h2 class="chapter-title">CHAPTER 6: TESTING</h2>
+    
+    <h3 class="section-title">6.1 Testing Methodology</h3>
+    <p>
+      Software quality was validated through both <strong>Automated Unit Testing</strong> and <strong>Manual Functional Verification</strong>:
+    </p>
+    <ul>
+      <li><strong>Automated Test Framework:</strong> Configured with <strong>Vitest v5.x</strong>, <strong>React Testing Library</strong>, and <strong>JSDOM</strong>. Virtual IPC bridges were mocked to test React component lifecycles, user greetings, and cart state rendering in isolation.</li>
+      <li><strong>Manual Black-Box Testing:</strong> Tested real-world checkout workflows, barcode scanning sequences, and database backup routines.</li>
+    </ul>
+
+    <h3 class="section-title">6.2 Test Cases & Execution Results</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Test ID</th>
+          <th>Scenario Under Test</th>
+          <th>Test Input</th>
+          <th>Expected Outcome</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>TC-01</strong></td>
+          <td>Admin Authentication</td>
+          <td>admin / admin123</td>
+          <td>Login successful; route to Dashboard</td>
+          <td><strong style="color: green;">PASS</strong></td>
+        </tr>
+        <tr>
+          <td><strong>TC-02</strong></td>
+          <td>Staff RBAC Security</td>
+          <td>staff1 / staff123</td>
+          <td>User Management navigation link hidden</td>
+          <td><strong style="color: green;">PASS</strong></td>
+        </tr>
+        <tr>
+          <td><strong>TC-03</strong></td>
+          <td>Barcode Scan Checkout</td>
+          <td>SKU "890123" + Enter</td>
+          <td>Item added to active cart automatically</td>
+          <td><strong style="color: green;">PASS</strong></td>
+        </tr>
+        <tr>
+          <td><strong>TC-04</strong></td>
+          <td>Inventory Auto-Deduct</td>
+          <td>Complete sale of 2 units</td>
+          <td>Stock decremented by 2 in SQLite</td>
+          <td><strong style="color: green;">PASS</strong></td>
+        </tr>
+        <tr>
+          <td><strong>TC-05</strong></td>
+          <td>Invoice Refund / Restock</td>
+          <td>Click "Refund" on invoice</td>
+          <td>Status marked Refunded; stock restored</td>
+          <td><strong style="color: green;">PASS</strong></td>
+        </tr>
+        <tr>
+          <td><strong>TC-06</strong></td>
+          <td>Loyalty Points Crediting</td>
+          <td>₹500 bill with customer phone</td>
+          <td>Customer points incremented by +500</td>
+          <td><strong style="color: green;">PASS</strong></td>
+        </tr>
+        <tr>
+          <td><strong>TC-07</strong></td>
+          <td>Database Local Backup</td>
+          <td>Trigger Backup in Settings</td>
+          <td>Generates identical copy of SQLite `.db` file</td>
+          <td><strong style="color: green;">PASS</strong></td>
+        </tr>
+        <tr>
+          <td><strong>TC-08</strong></td>
+          <td>Automated Vitest Suite</td>
+          <td><code>npm run test</code></td>
+          <td>All virtual component tests pass</td>
+          <td><strong style="color: green;">PASS</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ==================== CHAPTER 7 ==================== -->
+  <div class="page">
+    <h2 class="chapter-title">CHAPTER 7: CONCLUSION & FUTURE SCOPE</h2>
+    
+    <h3 class="section-title">7.1 Summary of Work</h3>
+    <p>
+      Nexus POS demonstrates the viability of modern desktop retail architectures. By integrating React 19 and Vite with Electron and SQLite, the platform provides the visual fluidity of modern web applications while delivering the speed, data privacy, and zero-latency reliability of local embedded databases. It satisfies all functional requirements set forth by physical retail merchants.
+    </p>
+
+    <h3 class="section-title">7.2 Limitations</h3>
+    <ul>
+      <li><strong>Single-Terminal Scope:</strong> Operates locally on one PC; cannot yet sync across multiple cash registers simultaneously in large supermarkets.</li>
+      <li><strong>Direct Hardware Serial Hooks:</strong> ESC/POS cash drawer triggers currently rely on standard printer drivers rather than raw serial communication.</li>
+    </ul>
+
+    <h3 class="section-title">7.3 Learning Outcomes</h3>
+    <ul>
+      <li>Mastered Electron's decoupled multi-process architecture and secure IPC bridges using <code>contextBridge</code>.</li>
+      <li>Gained deep practical expertise in salted cryptographic key derivation algorithms (<code>scrypt</code>) and timing-safe equality checks.</li>
+      <li>Implemented hardware keyboard event interception in React for rapid barcode input.</li>
+      <li>Learned automated frontend unit testing using Vitest, JSDOM, and React Testing Library.</li>
+    </ul>
+
+    <h3 class="section-title">7.4 Possible Enhancements</h3>
+    <ul>
+      <li><strong>LAN Multi-Counter Sync:</strong> Adding local WebSocket synchronization to connect multiple cashier terminals to a master register node.</li>
+      <li><strong>Hardware ESC/POS Drivers:</strong> Direct binary communication to trigger automatic physical cash drawer kickouts and thermal paper cutters.</li>
+      <li><strong>Optional Encrypted Cloud Mirroring:</strong> Scheduled end-to-end encrypted backup uploads to Google Drive or AWS S3.</li>
+    </ul>
+  </div>
+
+  <!-- ==================== CHAPTER 8 ==================== -->
+  <div class="page">
+    <h2 class="chapter-title">CHAPTER 8: BIBLIOGRAPHY & REFERENCES</h2>
+    <ol>
+      <li><strong>Electron Documentation:</strong> "Electron Application Architecture and Security Best Practices." <em>https://www.electronjs.org/docs/</em></li>
+      <li><strong>React Core Team:</strong> "React 19 Documentation & Component Paradigms." <em>https://react.dev/</em></li>
+      <li><strong>D. Richard Hipp:</strong> "SQLite Database System Architecture & ACID Compliance." <em>https://www.sqlite.org/</em></li>
+      <li><strong>Colin Percival:</strong> "Stronger Key Derivation via Sequential Memory-Hard Functions (scrypt)." <em>BSDCAN Proceedings, 2009.</em></li>
+      <li><strong>Vitest Testing Framework:</strong> "Blazing Fast Unit Test Framework for Vite." <em>https://vitest.dev/</em></li>
+      <li><strong>James Parrott (jsPDF):</strong> "Client-side HTML5 and JavaScript PDF Generation." <em>https://github.com/parallax/jsPDF</em></li>
+      <li><strong>Pressman, Roger S.:</strong> <em>Software Engineering: A Practitioner's Approach</em>, 8th Edition, McGraw-Hill Education.</li>
+      <li><strong>Silberschatz, Korth, Sudarshan:</strong> <em>Database System Concepts</em>, 7th Edition, McGraw-Hill.</li>
+    </ol>
+  </div>
+
+</body>
+</html>
