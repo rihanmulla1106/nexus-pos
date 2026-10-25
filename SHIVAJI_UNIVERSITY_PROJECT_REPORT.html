@@ -19,7 +19,7 @@
     }
     .page {
       page-break-after: always;
-      min-height: 90vh;
+      min-height: 92vh;
       display: flex;
       flex-direction: column;
       box-sizing: border-box;
@@ -38,35 +38,24 @@
       box-sizing: border-box;
     }
     h1.project-title {
-      font-size: 22pt;
+      font-size: 26pt;
       font-weight: bold;
-      margin: 12px 0 6px 0;
+      margin: 10px 0 6px 0;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       color: #0b192c;
-    }
-    h2.project-sub {
-      font-size: 13pt;
-      font-weight: normal;
-      font-style: italic;
-      margin: 0 0 16px 0;
-      color: #333;
-    }
-    .logo-emblem {
-      margin: 10px auto;
-      text-align: center;
     }
     .emblem-circle {
       width: 110px;
       height: 110px;
       border: 2px solid #003366;
       border-radius: 50%;
-      margin: 0 auto;
+      margin: 6px auto;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 9pt;
+      font-size: 8.5pt;
       font-weight: bold;
       color: #003366;
       background: #f4f8fb;
@@ -75,16 +64,16 @@
       box-sizing: border-box;
     }
     .emblem-sanstha {
-      width: 100px;
-      height: 100px;
+      width: 90px;
+      height: 90px;
       border: 2px solid #8B0000;
       border-radius: 50%;
-      margin: 0 auto;
+      margin: 4px auto;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 8.5pt;
+      font-size: 7.5pt;
       font-weight: bold;
       color: #8B0000;
       background: #fffaf0;
@@ -94,7 +83,7 @@
     }
     .cert-heading {
       text-align: center;
-      font-size: 14pt;
+      font-size: 13pt;
       font-weight: bold;
       text-transform: uppercase;
       margin: 0;
@@ -155,17 +144,6 @@
       margin-bottom: 4px;
       text-align: justify;
     }
-    .sig-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 40px;
-      margin-bottom: 20px;
-    }
-    .sig-table td {
-      border: 1px solid #333;
-      padding: 8px;
-      text-align: center;
-    }
     .code-box {
       background: #f8f9fa;
       border: 1px solid #ccc;
@@ -192,29 +170,26 @@
 </head>
 <body>
 
-  <!-- ==================== COVER PAGE ==================== -->
+  <!-- ==================== PAGE 1: TITLE / COVER PAGE ==================== -->
   <div class="page">
     <div class="cover-border">
       <div>
-        <p class="no-indent" style="font-size: 14pt; margin: 0; font-weight: bold; text-transform: uppercase;">
+        <p class="no-indent" style="font-size: 14pt; margin: 0; font-weight: bold;">
           A Project Report On
         </p>
-        <h1 class="project-title">NEXUS POS</h1>
-        <h2 class="project-sub">An Offline-First Desktop Point of Sale and Intelligent Inventory Management System</h2>
-        
+        <h1 class="project-title">Nexus POS</h1>
         <p class="no-indent" style="font-size: 12pt; margin: 4px 0;"><strong>For</strong></p>
         <p class="no-indent" style="font-size: 14pt; font-weight: bold; text-transform: uppercase; color: #8B0000; margin: 0;">
           Raje Ramrao Mahavidyalaya, Jath
         </p>
       </div>
 
-      <!-- UNIVERSITY LOGO SECTION -->
-      <div class="logo-emblem">
+      <div>
+        <p class="no-indent" style="font-size: 11pt; font-weight: bold; margin-bottom: 4px;">Submitted to</p>
         <div class="emblem-circle">
           <span>★ SHIVAJI ★<br>UNIVERSITY<br>KOLHAPUR<br>ज्ञानमेवामृतम्</span>
         </div>
-        <p class="no-indent" style="font-size: 11pt; font-weight: bold; margin-top: 6px;">Submitted to</p>
-        <p class="no-indent" style="font-size: 14pt; font-weight: bold; text-transform: uppercase; margin: 0;">
+        <p class="no-indent" style="font-size: 14pt; font-weight: bold; text-transform: uppercase; margin: 4px 0 0 0;">
           Shivaji University, Kolhapur
         </p>
         <p class="no-indent" style="font-size: 11pt; font-style: italic; margin-top: 2px;">
@@ -225,23 +200,20 @@
         </p>
       </div>
 
-      <!-- STUDENT & GUIDE SECTION -->
-      <div style="display: flex; justify-content: space-between; text-align: left; margin: 10px 15px; font-size: 11pt;">
+      <div style="display: flex; justify-content: space-between; text-align: left; margin: 10px 15px; font-size: 11.5pt;">
         <div>
           <p class="no-indent"><strong>By:</strong></p>
-          <p class="no-indent" style="font-size: 12pt; font-weight: bold;">Mr. Rihan Mulla</p>
-          <p class="no-indent">Exam Seat No: _________________</p>
+          <p class="no-indent" style="font-size: 12.5pt; font-weight: bold;">Rihan Shabbir Mulla</p>
         </div>
         <div style="text-align: right;">
           <p class="no-indent"><strong>Under the guidance of:</strong></p>
-          <p class="no-indent" style="font-size: 12pt; font-weight: bold;">Prof. [Guide Name]</p>
+          <p class="no-indent" style="font-size: 12.5pt; font-weight: bold;">Balikai J.I</p>
           <p class="no-indent">(M.C.A)</p>
         </div>
       </div>
 
-      <!-- SANSTHA & PRINCIPAL FOOTER -->
       <div>
-        <div class="emblem-sanstha" style="width: 80px; height: 80px; font-size: 7.5pt; margin-bottom: 6px;">
+        <div class="emblem-sanstha">
           <span>SWAMI<br>VIVEKANAND<br>SANSTHA</span>
         </div>
         <p class="no-indent" style="font-size: 11pt; font-weight: bold; margin: 0;">Through,</p>
@@ -249,64 +221,62 @@
         <p class="no-indent" style="font-size: 13pt; font-weight: bold; text-transform: uppercase; margin: 0;">
           Raje Ramrao Mahavidyalaya, Jath
         </p>
-        <p class="no-indent" style="font-size: 11pt; margin-top: 4px;"><strong>In the Academic Year: 2026 - 2027</strong></p>
+        <p class="no-indent" style="font-size: 11pt; margin-top: 4px;"><strong>In the Year 2026-2027</strong></p>
       </div>
     </div>
   </div>
 
-  <!-- ==================== CERTIFICATE ==================== -->
+  <!-- ==================== PAGE 2: CERTIFICATE ==================== -->
   <div class="page">
     <div style="text-align: center; margin-bottom: 25px;">
-      <div class="emblem-sanstha" style="width: 85px; height: 85px; font-size: 8pt; margin-bottom: 8px;">
+      <div class="emblem-sanstha" style="width: 80px; height: 80px; margin-bottom: 6px;">
         <span>SWAMI<br>VIVEKANAND<br>SANSTHA</span>
       </div>
-      <p class="cert-heading">Shri Swami Vivekanand Shikshan Sanstha, Kolhapur’s</p>
+      <p class="cert-heading">Swami Vivekanand Shikshan Sanstha’s</p>
       <p class="cert-subheading" style="font-size: 15pt; color: #8B0000; text-transform: uppercase;">
         Raje Ramrao Mahavidyalaya, Jath
       </p>
-      <p class="cert-subheading" style="color: #003366;">DEPARTMENT OF B.C.A.</p>
+      <p class="cert-subheading" style="color: #003366;">Department of B.C.A.</p>
     </div>
 
     <h2 style="text-align: center; font-size: 18pt; text-decoration: underline; margin: 15px 0 25px 0;">CERTIFICATE</h2>
 
     <p style="line-height: 1.8; font-size: 12pt;">
-      This is to certify that the project report entitled <strong>“NEXUS POS: An Offline-First Desktop Point of Sale and Intelligent Inventory Management System”</strong> is a bonafide record of project work, carried out in this college by <strong>Mr. Rihan Mulla</strong> in partial fulfillment of the award of <strong>Bachelor of Computer Application-III (Sem–VI)</strong> as laid down by <strong>Shivaji University, Kolhapur</strong>.
+      This is to certify that the project report entitled <strong>Nexus POS</strong> is record of project work, carried out in this college by <strong>Rihan Shabbir Mulla</strong> in the partial fulfillment of award of <strong>Bachelor of Computer Application-III (Sem–VI)</strong> as laid down by <strong>Shivaji University, Kolhapur</strong>.
     </p>
 
     <p style="line-height: 1.8; font-size: 12pt;">
-      This report presents their sincere work carried out under my guidance and supervision during the academic year 2026 - 2027.
+      This report presents their sincere work carried out under my guidance.
     </p>
 
-    <div style="margin-top: 40px; font-size: 11.5pt;">
-      <p class="no-indent"><strong>Place:</strong> Jath</p>
+    <div style="margin-top: 35px; font-size: 11.5pt;">
+      <p class="no-indent"><strong>Place:</strong> Jath.</p>
       <p class="no-indent"><strong>Date:</strong> _____ / _____ / 2026</p>
     </div>
 
-    <div style="display: flex; justify-content: space-between; margin-top: 80px; text-align: center;">
+    <div style="display: flex; justify-content: space-between; margin-top: 70px; text-align: center;">
       <div style="width: 200px;">
         <div style="border-top: 1px solid #111; padding-top: 5px;">
-          <strong>Prof. [Guide Name]</strong><br>
-          (M.C.A)<br>
+          <strong>Balikai J.I</strong><br>
           Project Guide
         </div>
       </div>
       <div style="width: 200px;">
         <div style="border-top: 1px solid #111; padding-top: 5px;">
           <strong>Mr. Mali P.D</strong><br>
-          HOD<br>
-          Dept. of B.C.A.
+          HOD
         </div>
       </div>
     </div>
 
     <div style="margin-top: 60px; font-size: 11pt;">
-      <p class="no-indent"><strong>Examiners:</strong></p>
-      <p class="no-indent" style="margin-top: 8px;">1) Internal Examiner: ____________________________________</p>
-      <p class="no-indent" style="margin-top: 8px;">2) External Examiner: ____________________________________</p>
+      <p class="no-indent"><strong>Examiner:</strong></p>
+      <p class="no-indent" style="margin-top: 8px;">1) _________________________________________________</p>
+      <p class="no-indent" style="margin-top: 8px;">2) _________________________________________________</p>
     </div>
   </div>
 
-  <!-- ==================== DECLARATION ==================== -->
+  <!-- ==================== PAGE 3: DECLARATION ==================== -->
   <div class="page">
     <h2 style="text-align: center; font-size: 16pt; text-decoration: underline; margin-bottom: 25px;">DECLARATION</h2>
 
@@ -316,22 +286,22 @@
       Kolhapur.
     </p>
 
-    <p class="no-indent" style="margin-top: 15px;"><strong>Respected Sir,</strong></p>
+    <p class="no-indent" style="margin-top: 15px;"><strong>Sir,</strong></p>
 
     <p style="line-height: 1.8;">
-      We the undersigned, <strong>Mr. Rihan Mulla</strong>, hereby declare that the project report entitled <strong>“NEXUS POS: An Offline-First Desktop Point of Sale and Intelligent Inventory Management System”</strong> submitted by us under the guidance of <strong>Prof. [Guide Name] (M.C.A)</strong> is our original work.
+      We undersigned, <strong>Rihan Shabbir Mulla</strong> hereby to declare that, the project report <strong>Nexus POS</strong> submitted by under the guidance of <strong>Balikai J.I</strong> is our original work. We have not reproduced any information about from any report submitted to Shivaji University, Kolhapur this year or any of the previous years.
     </p>
 
     <p style="line-height: 1.8;">
-      We have not reproduced any information from any report submitted to Shivaji University, Kolhapur this year or in any of the previous academic years. We understand that any such copying is liable to punishment in a way that University Authorities deem fit.
+      We undersigned that any such coping is liable to the punishment in a way that University Authorities deem fit.
     </p>
 
     <div style="margin-top: 30px; font-size: 11pt;">
-      <p class="no-indent"><strong>Place:</strong> Jath</p>
       <p class="no-indent"><strong>Date:</strong> _____ / _____ / 2026</p>
+      <p class="no-indent"><strong>Place:</strong> Jath.</p>
     </div>
 
-    <table class="sig-table">
+    <table style="width: 100%; border-collapse: collapse; margin-top: 40px;">
       <thead>
         <tr>
           <th style="width: 25%; text-align: center;">Exam Seat No.</th>
@@ -342,39 +312,41 @@
       <tbody>
         <tr>
           <td style="height: 45px; text-align: center;">_________________</td>
-          <td>Mr. Rihan Mulla</td>
+          <td>Rihan Shabbir Mulla</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="height: 45px;"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="height: 45px;"></td>
+          <td></td>
           <td></td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- ==================== ACKNOWLEDGEMENT ==================== -->
+  <!-- ==================== PAGE 4: ACKNOWLEDGEMENT ==================== -->
   <div class="page">
     <h2 style="text-align: center; font-size: 16pt; text-decoration: underline; margin-bottom: 25px;">ACKNOWLEDGEMENT</h2>
 
     <p style="line-height: 1.8;">
-      We express a very proud and greatest moment of our lives in putting forward this project entitled <strong>“NEXUS POS”</strong>. With the submission of this project, we would like to express our heartfelt gratitude to the individuals who have provided their valuable time, technical insights, and inspiration to accomplish this work.
+      We express a very good & greatest moment of my life to put forward this project named <strong>Nexus POS</strong> With the submission of this project we would like to Thank here as we named the people who have given their valuable time to accomplish this project.
     </p>
 
     <p style="line-height: 1.8;">
-      At the outset, we are glad to bow with profound gratitude before our project guide <strong>Prof. [Guide Name] (M.C.A)</strong> for his inspiring guidance, constant encouragement, and technical directions throughout the development lifecycle of this project.
+      At the start, we glad to bow before our guide <strong>Balikai J.I</strong> The contributions made by the whole faculty members of our college & staff, we also thank full to our friends & well-wishers, who are responsible for the progress of this project.
     </p>
 
-    <p style="line-height: 1.8;">
-      We convey our sincere thanks to <strong>Mr. Mali P.D (Head of Department of B.C.A.)</strong> and all respected faculty members and lab staff of Raje Ramrao Mahavidyalaya, Jath, for their continuous support and for providing computing infrastructure.
-    </p>
-
-    <p style="line-height: 1.8;">
-      We also express our sincere respect to the Principal, <strong>Raje Ramrao Mahavidyalaya, Jath</strong>, for granting permission and facilities. Lastly, we thank our parents, friends, and well-wishers who stood by us and supported the progress of this project.
-    </p>
-
-    <div style="margin-top: 30px; font-size: 11pt;">
-      <p class="no-indent"><strong>Place:</strong> Jath</p>
+    <div style="margin-top: 40px; font-size: 11pt;">
+      <p class="no-indent"><strong>Place:</strong> Jath.</p>
       <p class="no-indent"><strong>Date:</strong> _____ / _____ / 2026</p>
     </div>
 
-    <table class="sig-table">
+    <table style="width: 100%; border-collapse: collapse; margin-top: 40px;">
       <thead>
         <tr>
           <th style="width: 25%; text-align: center;">Exam Seat No.</th>
@@ -385,104 +357,114 @@
       <tbody>
         <tr>
           <td style="height: 45px; text-align: center;">_________________</td>
-          <td>Mr. Rihan Mulla</td>
+          <td>Rihan Shabbir Mulla</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="height: 45px;"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="height: 45px;"></td>
+          <td></td>
           <td></td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- ==================== TABLE OF CONTENTS / INDEX ==================== -->
+  <!-- ==================== PAGE 5: INDEX / TABLE OF CONTENTS ==================== -->
   <div class="page">
-    <h2 style="text-align: center; font-size: 16pt; text-decoration: underline; margin-bottom: 20px;">INDEX / TABLE OF CONTENTS</h2>
+    <h2 style="text-align: center; font-size: 16pt; text-decoration: underline; margin-bottom: 20px;">INDEX</h2>
 
     <table>
       <thead>
         <tr>
-          <th style="width: 10%; text-align: center;">Sr. No.</th>
-          <th style="width: 75%;">Chapter Name & Sub-Topics</th>
-          <th style="width: 15%; text-align: center;">Page No.</th>
+          <th style="width: 10%; text-align: center;">SrNo</th>
+          <th style="width: 75%;">Chapter Name</th>
+          <th style="width: 15%; text-align: center;">Page No</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td style="text-align: center; font-weight: bold;">1</td>
           <td>
-            <strong>System Analysis</strong><br>
-            &bull; 1.1 Background of the Problem<br>
-            &bull; 1.2 Existing System and its Limitations<br>
-            &bull; 1.3 Objective of the Project<br>
-            &bull; 1.4 Scope of the Project
+            <strong>Chapter Name - System Analysis</strong><br>
+            &bull; Background of the problem<br>
+            &bull; Existing system and its Limitations<br>
+            &bull; Objective of the project<br>
+            &bull; Scope of the project
           </td>
-          <td style="text-align: center;">1</td>
+          <td style="text-align: center;">6</td>
         </tr>
         <tr>
           <td style="text-align: center; font-weight: bold;">2</td>
           <td>
-            <strong>System Study / Proposed System</strong><br>
-            &bull; 2.1 Software Development Model (Agile Prototyping Model)<br>
-            &bull; 2.2 Feasibility Study (Technical, Operational, Economic)
+            <strong>Chapter Name - System Study / Proposed System</strong><br>
+            &bull; 2.1 Software Development Model<br>
+            &bull; 2.2 Feasibility Study
           </td>
-          <td style="text-align: center;">3</td>
+          <td style="text-align: center;">8</td>
         </tr>
         <tr>
           <td style="text-align: center; font-weight: bold;">3</td>
           <td>
-            <strong>Requirement Analysis</strong><br>
+            <strong>Chapter Name - Requirement Analysis</strong><br>
             &bull; 3.1 Functional Requirements<br>
             &bull; 3.2 Non-Functional Requirements<br>
             &bull; 3.3 Hardware & Software Requirements
           </td>
-          <td style="text-align: center;">5</td>
+          <td style="text-align: center;">10</td>
         </tr>
         <tr>
           <td style="text-align: center; font-weight: bold;">4</td>
           <td>
-            <strong>System Design</strong><br>
-            &bull; 4.1 System Architecture Diagram / DFD (Level 0, Level 1, Level 2)<br>
-            &bull; 4.2 Database Design (ER Diagram & Data Dictionary)
+            <strong>Chapter Name - System Design</strong><br>
+            &bull; 4.1 System Architecture Diagram / DFD<br>
+            &bull; 4.2 Database Design (ER Diagram)
           </td>
-          <td style="text-align: center;">7</td>
+          <td style="text-align: center;">12</td>
         </tr>
         <tr>
           <td style="text-align: center; font-weight: bold;">5</td>
           <td>
-            <strong>Implementation</strong><br>
-            &bull; 5.1 Module-wise Screenshots of Input & Output Design<br>
-            &bull; 5.2 Reports (Standard A4 & 80mm Thermal Receipt Generation)<br>
-            &bull; 5.3 Code Snippets (scrypt Security, Barcode Scanner, SQLite Transactions)
+            <strong>Chapter Name - Implementation</strong><br>
+            &bull; 5.1 Module-wise Screenshots of Input & Output design<br>
+            &bull; 5.2 Reports<br>
+            &bull; 5.3 Code snippets (important parts only)
           </td>
-          <td style="text-align: center;">11</td>
+          <td style="text-align: center;">15</td>
         </tr>
         <tr>
           <td style="text-align: center; font-weight: bold;">6</td>
           <td>
-            <strong>Testing</strong><br>
-            &bull; 6.1 Testing Methodology (Automated Vitest & Manual Test Cases)
+            <strong>Chapter Name - Testing</strong><br>
+            &bull; 6.1 Testing methodology
           </td>
-          <td style="text-align: center;">16</td>
+          <td style="text-align: center;">19</td>
         </tr>
         <tr>
           <td style="text-align: center; font-weight: bold;">7</td>
           <td>
-            <strong>Conclusion & Future Scope</strong><br>
-            &bull; 7.1 Summary of Work<br>
+            <strong>Chapter Name - Conclusion & Future Scope</strong><br>
+            &bull; 7.1 Summary of work<br>
             &bull; 7.2 Limitations<br>
-            &bull; 7.3 Learning Outcomes<br>
-            &bull; 7.4 Possible Enhancements
+            &bull; 7.3 Learning outcomes<br>
+            &bull; 7.4 Possible enhancements
           </td>
-          <td style="text-align: center;">18</td>
+          <td style="text-align: center;">21</td>
         </tr>
         <tr>
           <td style="text-align: center; font-weight: bold;">8</td>
-          <td><strong>Bibliography & References</strong></td>
-          <td style="text-align: center;">20</td>
+          <td><strong>Bibliography</strong></td>
+          <td style="text-align: center;">23</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- ==================== CHAPTER 1 ==================== -->
+  <!-- ==================== CHAPTER 1 (PAGE 6-7) ==================== -->
   <div class="page">
     <h2 class="chapter-title">CHAPTER 1: SYSTEM ANALYSIS</h2>
     
@@ -532,7 +514,7 @@
     </p>
   </div>
 
-  <!-- ==================== CHAPTER 2 ==================== -->
+  <!-- ==================== CHAPTER 2 (PAGE 8-9) ==================== -->
   <div class="page">
     <h2 class="chapter-title">CHAPTER 2: SYSTEM STUDY / PROPOSED SYSTEM</h2>
     
@@ -581,7 +563,7 @@
     </table>
   </div>
 
-  <!-- ==================== CHAPTER 3 ==================== -->
+  <!-- ==================== CHAPTER 3 (PAGE 10-11) ==================== -->
   <div class="page">
     <h2 class="chapter-title">CHAPTER 3: REQUIREMENT ANALYSIS</h2>
     
@@ -655,11 +637,11 @@
     </table>
   </div>
 
-  <!-- ==================== CHAPTER 4 ==================== -->
+  <!-- ==================== CHAPTER 4 (PAGE 12-14) ==================== -->
   <div class="page">
     <h2 class="chapter-title">CHAPTER 4: SYSTEM DESIGN</h2>
     
-    <h3 class="section-title">4.1 System Architecture & Data Flow Diagrams</h3>
+    <h3 class="section-title">4.1 System Architecture Diagram / DFD</h3>
     <p>
       Nexus POS implements Electron's multi-process architecture. The <strong>Main Process</strong> runs in Node.js and executes privileged disk I/O and SQLite operations. The <strong>Renderer Process</strong> renders the React 19 UI inside a secure Chromium sandbox. Communication is strictly routed through an asynchronous <strong>IPC (Inter-Process Communication)</strong> bridge.
     </p>
@@ -685,7 +667,18 @@
       </p>
     </div>
 
-    <h3 class="section-title">4.2 Database Design (ER Diagram & Data Dictionary)</h3>
+    <div class="screen-card">
+      <h4>DFD Level 2: Point of Sale & Billing Sub-Process</h4>
+      <p class="no-indent">
+        &bull; <strong>3.1 Input SKU:</strong> Intercepts barcode keystroke sequence.<br>
+        &bull; <strong>3.2 Validate Stock:</strong> Checks available stock > 0 in SQLite products table.<br>
+        &bull; <strong>3.3 Cart Math:</strong> Computes Subtotal, Tax Percentage, and Total tendered.<br>
+        &bull; <strong>3.4 Split Tender:</strong> Calculates balance due or change tendered for Cash, Card, and UPI.<br>
+        &bull; <strong>3.5 Persistence & Restock:</strong> Commits invoice, decrements stock, awards CRM loyalty points.
+      </p>
+    </div>
+
+    <h3 class="section-title">4.2 Database Design (ER Diagram)</h3>
     <p>The database schema is fully normalized into seven relational tables in SQLite:</p>
     
     <table>
@@ -744,11 +737,11 @@
     </table>
   </div>
 
-  <!-- ==================== CHAPTER 5 ==================== -->
+  <!-- ==================== CHAPTER 5 (PAGE 15-18) ==================== -->
   <div class="page">
     <h2 class="chapter-title">CHAPTER 5: IMPLEMENTATION</h2>
     
-    <h3 class="section-title">5.1 Module-wise Design Overview</h3>
+    <h3 class="section-title">5.1 Module-wise Screenshots of Input & Output Design</h3>
     <div class="screen-card">
       <h4>1. Authentication & Login Screen</h4>
       <p class="no-indent">Provides a secure dark-mode portal. Authenticates users using cryptographic hash comparisons. Restricts administrative navigation links if the user role is 'Staff'.</p>
@@ -766,7 +759,7 @@
       <p class="no-indent">Displays high-level KPI cards (Total Sales, Total Products, Low Stock Count, Today's Profit) and a clean weekly revenue performance graph.</p>
     </div>
 
-    <h3 class="section-title">5.2 Document & Report Generation</h3>
+    <h3 class="section-title">5.2 Reports</h3>
     <p>
       Nexus POS dynamically compiles invoices on the client using <code>jsPDF</code> and <code>jsPDF-AutoTable</code>. Two layout formats are available:
     </p>
@@ -775,7 +768,7 @@
       <li><strong>80mm Thermal Receipt:</strong> Formatted specifically for POS thermal rolls with condensed typography, dashed dividers, and receipt footers.</li>
     </ol>
 
-    <h3 class="section-title">5.3 Important Code Snippets</h3>
+    <h3 class="section-title">5.3 Code Snippets (Important Parts Only)</h3>
     <p class="no-indent"><strong>1. Salted Cryptographic Key Derivation (`scrypt` in Node.js):</strong></p>
     <div class="code-box">
 const crypto = require('crypto')
@@ -811,7 +804,7 @@ useEffect(() => {
     </div>
   </div>
 
-  <!-- ==================== CHAPTER 6 ==================== -->
+  <!-- ==================== CHAPTER 6 (PAGE 19-20) ==================== -->
   <div class="page">
     <h2 class="chapter-title">CHAPTER 6: TESTING</h2>
     
@@ -824,7 +817,6 @@ useEffect(() => {
       <li><strong>Manual Black-Box Testing:</strong> Tested real-world checkout workflows, barcode scanning sequences, and database backup routines.</li>
     </ul>
 
-    <h3 class="section-title">6.2 Test Cases & Execution Results</h3>
     <table>
       <thead>
         <tr>
@@ -896,7 +888,7 @@ useEffect(() => {
     </table>
   </div>
 
-  <!-- ==================== CHAPTER 7 ==================== -->
+  <!-- ==================== CHAPTER 7 (PAGE 21-22) ==================== -->
   <div class="page">
     <h2 class="chapter-title">CHAPTER 7: CONCLUSION & FUTURE SCOPE</h2>
     
@@ -927,9 +919,9 @@ useEffect(() => {
     </ul>
   </div>
 
-  <!-- ==================== CHAPTER 8 ==================== -->
+  <!-- ==================== CHAPTER 8 (PAGE 23) ==================== -->
   <div class="page">
-    <h2 class="chapter-title">CHAPTER 8: BIBLIOGRAPHY & REFERENCES</h2>
+    <h2 class="chapter-title">CHAPTER 8: BIBLIOGRAPHY</h2>
     <ol>
       <li><strong>Electron Documentation:</strong> "Electron Application Architecture and Security Best Practices." <em>https://www.electronjs.org/docs/</em></li>
       <li><strong>React Core Team:</strong> "React 19 Documentation & Component Paradigms." <em>https://react.dev/</em></li>
